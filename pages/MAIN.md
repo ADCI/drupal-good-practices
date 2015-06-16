@@ -10,6 +10,7 @@
 - [Forms](#forms)
 - [Search](#search)
 - [Cache](#cache)
+- [Security](#security)
 - [Debug](#debug)
 - [Test](#testing)
 - [Deploy](#deployment)
