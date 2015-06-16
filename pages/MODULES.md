@@ -9,6 +9,7 @@
   - [Libraries API](#libraries)
   - [Features](#features)
   - [Pathauto](#pathauto)
+  - [Views](#views)
 
 ## [IMCE](https://www.drupal.org/project/imce)
 
@@ -34,3 +35,9 @@
 
   * Do not use default "content" path for Node
   
+## [Views](https://www.drupal.org/project/views)
+
+  * Adequate machine names for your views and displays
+  * [Content cache](https://www.drupal.org/project/views_content_cache) for Node entity, Time based cache for another types
+  * Attach your views to features
+  * Add CSS class to displays
