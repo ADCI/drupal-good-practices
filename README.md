@@ -4,4 +4,4 @@
 ## Table of Contents
 * * *
 
-- [Modules](MODULES.md)
+- [Modules](pages/MODULES.md)
