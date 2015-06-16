@@ -1,6 +1,8 @@
 # Drupal Good Practices
+* * *
 
 ## Table of Contents
+* * *
 
 - [Modules](#modules)
     - [IMCE](#imce)
@@ -10,6 +12,7 @@
     - [Pathauto](#pathauto)
     
 ## Modules
+* * *
 
 ### [IMCE](https://www.drupal.org/project/imce)
 
