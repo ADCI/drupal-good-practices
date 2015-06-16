@@ -4,12 +4,12 @@
 ## Table of Contents
 * * *
 
-  - [IMCE](#imce)
-  - [jQuery Update](#jquery_update)
-  - [Libraries API](#libraries)
-  - [Features](#features)
-  - [Pathauto](#pathauto)
-  - [Views](#views)
+- [IMCE](#imce)
+- [jQuery Update](#jquery_update)
+- [Libraries API](#libraries)
+- [Features](#features)
+- [Pathauto](#pathauto)
+- [Views](#views)
 
 ## [IMCE](https://www.drupal.org/project/imce)
 
