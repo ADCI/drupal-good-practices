@@ -1,4 +1,3 @@
 # Drush
-Complete __drush__ documentation is available on [Drush.org](http://www.drush.org/en/master/).
-
-* * *
+Complete **drush** documentation is available on [drush.org](http://www.drush.org/en/master/).
+For list of available commands see [drushcommands.com](http://drushcommands.com/)
