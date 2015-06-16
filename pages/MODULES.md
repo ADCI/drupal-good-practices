@@ -4,12 +4,12 @@
 ## Table of Contents
 * * *
 
-  - [IMCE](#imce)
-  - [jQuery Update](#jquery_update)
-  - [Libraries API](#libraries)
-  - [Features](#features)
-  - [Pathauto](#pathauto)
-  - [Views](#views)
+- [IMCE](#imce)
+- [jQuery Update](#jquery_update)
+- [Libraries API](#libraries)
+- [Features](#features)
+- [Pathauto](#pathauto)
+- [Views](#views)
 
 ## [IMCE](https://www.drupal.org/project/imce)
 
@@ -38,6 +38,6 @@
 ## [Views](https://www.drupal.org/project/views)
 
   * Adequate machine names for your views and displays
-  * [Content cache](https://www.drupal.org/project/views_content_cache) for Node entity, Time based cache for another types
+  * [Content cache](https://www.drupal.org/project/views_content_cache) for Node, Time based cache for another entity types
   * Attach your views to features
   * Add CSS class to displays
