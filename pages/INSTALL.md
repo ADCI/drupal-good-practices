@@ -116,7 +116,7 @@ You may uninstall listed modules via [Drush](DRUSH.md) using following commands:
     Augments **Views** by allowing bulk operations to be executed on the displayed rows.
   - [Administration Views](https://www.drupal.org/project/admin_views)  
     Replaces administrative overview/listing pages with actual views for superior usability.  
-    Required **Views Bulk Operations (VBO)** be installed.
+    Requires **Views Bulk Operations (VBO)** be installed.
   - [Search API](https://www.drupal.org/project/search_api)  
     Provides a framework for easily creating searches on any entity known to Drupal, using any kind of search engine. Integrated well with **Views**.  
     Recommended for building of any kind of searches on the site. Recommended for use with [Search API Solr Search](https://www.drupal.org/project/search_api_solr). [Search API Database Search](https://www.drupal.org/project/search_api_db) backed may be used as starter option.
