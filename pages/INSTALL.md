@@ -124,3 +124,69 @@ You may uninstall listed modules via [Drush](DRUSH.md) using following commands:
     Provides a suite of additional image effects that can be added to image styles (watermarking, file format switcher, rounded corners, etc.). Also adds the 'duplicate', 'export' and 'import' actions to image styles administration.
 
 ## Basic configuration
+
+### Title settings
+
+**@todo TBD**
+
+*admin/config/content/title*
+
+### jQuery Update
+
+Set default jQuery version to at least **1.7** which is safe option for most of sites, newer is better.  
+Override default jQuery version for your admin theme - set **1.5** or even **1.4** (shipped with Drupal core). With newer versions issues in admin UI are possible.
+
+*admin/config/development/jquery_update*
+
+### File system
+
+Set some **Private file system path**. Make sure that **Transliteration** options are switched on.
+
+**@todo Disable "Transliterate the displayed file name." option?**
+
+*admin/config/media/file-system*
+
+### Account settings
+
+Un-tick "Enable user pictures." option under **PERSONALIZATION** - in most cases you will not need it, use profiles with fields instead.
+
+*admin/config/people/accounts*
+
+### Regional settings
+
+Set **Default country** to "- None -" - initially it's safiest value, then the setting may be adjusted.  
+Set appropriate **First day of week**.  
+Set **Default time zone** to UTC.  
+Un-tick "Users may set their own time zone." - in most cases you will not need this.
+
+*admin/config/regional/settings*
+
+### URL aliases
+
+Empty **Default path pattern** in **CONTENT PATHS** and never set it to non-empty value.  
+Set appropriate **Default path pattern** in **TAXONOMY TERM PATHS** or make it empty.  
+Set appropriate **Pattern for user account page paths** in **USER PATHS** or make it empty.  
+Set empty patterns for content-types if nodes of these types should not be visible for regular users on their own pages (slidshow elements for example).  
+Patterns should consist of several parts separated by */* sign, for example for nodes *\[node:content-type\]/\[node:title\]* is good candidate. Try to avoid one-part aliases, for nodes of *Basic Page* content-type one-part aliases are ok (about-us, contact-us, etc.).
+
+*/admin/config/search/path/settings*
+
+**@todo Transliterate aliases?**
+
+*admin/config/search/path/settings*
+
+### Site information
+
+Set appropriate **Site name** and **admin@localhost.com** if were not set on installation.
+
+*admin/config/system/site-information*
+
+### Cron
+
+**@todo Set to "Never" on development?**
+
+*admin/config/system/cron*
+
+### Delta blocks
+
+**@todo TBD**
