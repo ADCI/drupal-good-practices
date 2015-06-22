@@ -242,7 +242,7 @@ Un-tick "Automatically update preview on changes".
 
 *admin/structure/views/settings*
 
-Development Views settings may be also set by execution of the following **drush** command:  
+Development Views settings may be also set by executing of the following **drush** command:  
 *drush vd*
 
 ### Update manager
