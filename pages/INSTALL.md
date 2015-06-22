@@ -127,7 +127,9 @@ You may uninstall listed modules via [Drush](DRUSH.md) using following commands:
 
 ### Title settings
 
-**@todo TBD**
+In the **Node** group check "Title" under **Automatic field replacement**.
+
+**@todo Label replacement and Taxonomy term settings?**
 
 *admin/config/content/title*
 
@@ -151,6 +153,8 @@ Set some **Private file system path**. Make sure that **Transliteration** option
 Un-tick "Enable user pictures." option under **PERSONALIZATION** - in most cases you will not need it, use profiles with fields instead.
 
 *admin/config/people/accounts*
+
+**@todo Is it easy enough to show pictures from profiles in comments for example?**
 
 ### Regional settings
 
@@ -190,3 +194,59 @@ Set appropriate **Site name** and **admin@localhost.com** if were not set on ins
 ### Delta blocks
 
 **@todo TBD**
+
+### People
+
+**@todo administrator/developer role**
+
+### Content types
+
+Edit **Article** and **Basic page** content types created during installation. Remove **Article** content-type if you don't need it. On content-type edit pages un-tick "Promoted to front page" checkbox in **Publishing options** group. Set other settings as needed. Give attention to **Comment settings** if you left the Comment module enabled because of needs and to **Menu settings**.
+
+*admin/structure/types*  
+*admin/structure/types/manage/article*  
+*admin/structure/types/manage/page*
+
+Replace Title property by Title field instance on the **MANAGE FIELDS** pages. Remove **Image** and **Tags** fields from **Article** content-type if needed. Adjust display settings on the **MANAGE DISPLAY** pages if needed.
+
+*admin/structure/types/manage/article/fields*  
+*admin/structure/types/manage/page/fields*
+
+### Features
+
+On the Features settings page set **Default export path** under **GENERAL SETTINGS** to "sites/all/modules/features".
+
+*admin/structure/features/settings*
+
+### Taxonomy
+
+Delete "Tags" vocabulary if it's not needed for you.
+
+*admin/structure/taxonomy*
+
+### Views
+
+On the Views settings page make sure the following settings are set:
+
+  - Show filters on the list of views
+  - Show advanced help warning
+  - Always show the master display
+  - Always show advanced display settings
+  - Show information and statistics about the view during live preview
+    - Above the preview
+    - Show the SQL query
+    - Show performance statistics
+    - Show other queries run during render during live preview
+
+Un-tick "Automatically update preview on changes".
+
+*admin/structure/views/settings*
+
+Development Views settings may be also set by execution of the following **drush** command:  
+*drush vd*
+
+### Update manager
+
+On the Available updates settings page check the **Check for updates of disabled modules and themes**.
+
+*admin/reports/updates/settings*
