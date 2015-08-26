@@ -1,0 +1,9 @@
+site_name: Drupal Good Practices
+pages:
+    - Home: index.md
+    - Drush: DRUSH.md
+    - Git: GIT.md
+    - Install: INSTALL.md
+    - Main: MAIN.md
+    - Modules: MODULES.md
+theme: readthedocs

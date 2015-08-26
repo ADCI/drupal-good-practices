@@ -4,7 +4,7 @@
 ## Table of Contents
 * * *
 
-- [Main](pages/MAIN.md)
-- [Install](pages/INSTALL.md)
-- [Modules](pages/MODULES.md)
-- [Drush](pages/DRUSH.md)
+- [Main](docs/MAIN.md)
+- [Install](docs/INSTALL.md)
+- [Modules](docs/MODULES.md)
+- [Drush](docs/DRUSH.md)
