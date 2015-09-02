@@ -1,8 +1,6 @@
 # Drupal Good Practices
-* * *
 
 ## Table of Contents
-* * *
 
 - [Main](docs/MAIN.md)
 - [Install](docs/INSTALL.md)
