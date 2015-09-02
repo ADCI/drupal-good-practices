@@ -72,7 +72,7 @@ Make sure your theme adds **block-[module]-[delta]** class to blocks to avoid us
 For styling needs also add more classes to blocks via **Block Class** module, add more classes and customize markup in Views via Views UI.  
 For more info on modules configuration and usage see [Modules](/docs/MODULES.md/) page.
 
-**@todo CSS preprocessors, postprocessor, etc.**
+**@todo CSS preprocessors, postprocessors, etc.**
 
 ## Test
 
