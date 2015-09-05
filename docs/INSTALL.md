@@ -123,6 +123,8 @@ You may uninstall listed modules via [Drush](DRUSH.md) using following commands:
   - [ImageCache Actions](https://www.drupal.org/project/imagecache_actions)  
     Provides a suite of additional image effects that can be added to image styles (watermarking, file format switcher, rounded corners, etc.). Also adds the 'duplicate', 'export' and 'import' actions to image styles administration.
 
+*See [Modules](MODULES.md) documentation page for more info on contrib modules.*
+
 ## Basic configuration
 
 ### Title settings
