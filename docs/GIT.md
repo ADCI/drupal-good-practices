@@ -2,11 +2,11 @@
 
 ## Table of Contents
 
-- [Installation](#installation)
-- [Configuration](#configuration)
-- [Documentation](#documentation)
-- [Git flows](#git-flows)
-- [Tools](#tools)
+  - [Installation](#installation)
+  - [Configuration](#configuration)
+  - [Documentation](#documentation)
+  - [Git flows](#git-flows)
+  - [Tools](#tools)
 
 ## Installation
 

@@ -2,11 +2,11 @@
 
 ## Table of Contents
 
-- [Installation](#installation)
-- [Not used modules](#not-used-modules)
-- [Must-have modules](#must-have-modules)
-- [Good-to-have modules](#good-to-have-modules)
-- [Basic configuration](#basic-configuration)
+  - [Installation](#installation)
+  - [Not used modules](#not-used-modules)
+  - [Must-have modules](#must-have-modules)
+  - [Good-to-have modules](#good-to-have-modules)
+  - [Basic configuration](#basic-configuration)
 
 ## Installation
 *Basic Drupal installation.*
