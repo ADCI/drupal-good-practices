@@ -1,7 +1,7 @@
 # Drupal Good Practices
 
-  - [Main](MAIN.md)
-  - [GIT](GIT.md)
-  - [Install](INSTALL.md)
-  - [Modules](MODULES.md)
-  - [Drush](DRUSH.md)
+  - [Main](main.md)
+  - [GIT](git.md)
+  - [Install](install.md)
+  - [Modules](modules.md)
+  - [Drush](drush.md)
