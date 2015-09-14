@@ -62,19 +62,37 @@
   - Extendable by code and [Rules](#rules).
   - Requirement for the [Administration Views](#administration-views).
 
+### [Views data export](https://www.drupal.org/project/views_data_export)
+
+  **@todo TBD**
+
 ### [Backup and Migrate](https://www.drupal.org/project/backup_migrate)
 
   - Excellent and easy to use backup solution for small and middle projects.
   - Do not use this module on biggest projects. CLI solutions (like the Drush) more preferred.
   - Do not save backup to public access directories.
 
+### [Diff](https://www.drupal.org/project/diff)
+
+  **@todo TBD**
+
+### @todo Weight vs. Nodequeue (vs. other?)
+
 ### [ThemeKey](https://www.drupal.org/project/themekey)
 
   - Allows to define simple or sophisticated theme-switching rules which allow automatic selection of a theme depending on current path, taxonomy terms, language, node-type, and many, many other properties.
 
+### [Override Node Options](https://www.drupal.org/project/override_node_options)
+
+  **@todo Is it really helpful?**
+
 ### [Workbench Moderation](https://www.drupal.org/project/workbench_moderation)
 
   - Adds arbitrary moderation states to Drupal core's "unpublished" and "published" node states, and affects the behavior of node revisions when nodes are published.
+
+### [Ultimate Cron](https://www.drupal.org/project/ultimate_cron)
+
+  **@todo TBD**
 
 ### [Schema](https://www.drupal.org/project/schema)
 
@@ -86,26 +104,15 @@
 
   - Adds an administration interface for hidden flood control variables in Drupal 7, like the login attempt limiters and any future hidden variables.
 
+### @todo https://www.drupal.org/project/total_control ?
+
 ### [Rabbit Hole](https://www.drupal.org/project/rabbit_hole)
 
   - Adds the ability to control what should happen when an entity is being viewed at its own page.
   - Useful if you have a content type that never should be displayed on its own page, like an image content type that's displayed in a carousel.
-
-### [jQuery Update](https://www.drupal.org/project/jquery_update)
-
-  - Set default jQuery version to at least **1.7** which is safe option for most of sites, newer is better.
-  - Override default jQuery version for your admin theme - set **1.5** or even **1.4** (shipped with Drupal core). With newer versions issues in admin UI are possible.
-
-### [Views data export](https://www.drupal.org/project/views_data_export)
-
-  **@todo TBD**
-
-### [Diff](https://www.drupal.org/project/diff)
-
-  **@todo TBD**
-
-### @todo Weight vs. Nodequeue (vs. other?)
-### @todo Elysia Cron vs. Ultimate Cron
+  - This is not an access control module!
+  - In most cases you will not need to override Rabbit Hole bundle settings on entity level.
+  - If you often need to override bundle settings on entity level, make sure this module fits your needs and you do not need true access control for example.
 
 ## Development
 
@@ -119,16 +126,40 @@
   - Helpful for site developers when trying to determine what a client, logged in as themselves, might see when logged into the site.
   - **@todo Do not use on production?**
 
+### [Entity API](https://www.drupal.org/project/entity)
+
+  - Extends the entity API of Drupal core in order to provide a unified way to deal with entities and their properties.
+  - It's very probable that you'll have it as dependency of other modules.
+  - Very helpful in dealing with nodes and other entities in your code, or if you define your own entity types.
+  - Entity Token module defines tokens for defined entity types (not only for core's node, user, etc.).
+
+## Utilities
+
+### [Chaos tool suite (ctools)](https://www.drupal.org/project/ctools)
+
+  - A set of APIs and tools to improve the developer experience.
+  - Requirement for a lot of modules.
+  - Plugins -- tools to make it easy for modules to let other modules implement plugins from.
+  - Exportables -- tools to make it easier for modules to have objects that live in database or live in code, such as 'default views'.
+  - Modal dialog -- tool to make it simple to put a form in a modal dialog.
+  - Additional AJAX commands.
+  - A lot lot more.
+
+### [Token](https://www.drupal.org/project/token)
+
+  - Extends Drupal 7 tokens system by adding some UI components, defining more tokens and other.
+
+### [jQuery Update](https://www.drupal.org/project/jquery_update)
+
+  - Set default jQuery version to at least **1.7** which is safe option for most of sites, newer is better.
+  - Override default jQuery version for your admin theme - set **1.5** or even **1.4** (shipped with Drupal core). With newer versions issues in admin UI are possible.
+
 ### [Libraries API](https://www.drupal.org/project/libraries)
 
   - Attach all external libraries by Libraries API.
   - Exceptions are not acceptable.
 
-### [Pathauto](https://www.drupal.org/project/pathauto)
-
-  - Do not use default "content" path for Node
-
-## Content
+## Site building
 
 ### [Views](https://www.drupal.org/project/views)
 
@@ -139,8 +170,19 @@
   - Attach your views to features.
   - Add CSS class to displays.
 
-## Files
+### [Date](https://www.drupal.org/project/date)
+
+  - Flexible date/time field type Date field.
+  - Date API that other modules can use.
+
+## Content authoring
 
 ### [IMCE](https://www.drupal.org/project/imce)
 
   - Configure default IMCE profile for uploading files to non-root directory.
+
+### [Pathauto](https://www.drupal.org/project/pathauto)
+
+  - Do not use default "content" path for Node
+
+### @todo Weight vs. Nodequeue (vs. other?)

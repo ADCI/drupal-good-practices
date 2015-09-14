@@ -252,3 +252,12 @@ Development Views settings may be also set by executing of the following **drush
 On the Available updates settings page check the **Check for updates of disabled modules and themes**.
 
 *admin/reports/updates/settings*
+
+### robots.txt
+
+Add following lines to your **robots.txt** file:
+
+*/node/*
+*/?q=node/*
+
+In (almost) all cases content you want to be indexed will have path aliases.
