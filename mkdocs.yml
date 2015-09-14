@@ -1,9 +1,25 @@
 site_name: Drupal Good Practices
 pages:
-    - Home: index.md
-    - Drush: drush.md
-    - Git: git.md
-    - Install: install.md
-    - Main: main.md
-    - Modules: modules.md
-theme: readthedocs
+    - Home: home.md
+    - Articles:
+        - 'Install': 'articles/install.md'
+        - 'Site building': 'articles/building.md'
+        - 'Users': 'articles/users.md'
+        - 'Content authoring': 'articles/content.md'
+        - 'Multilanguage': 'articles/multilang.md'
+        - 'Cache system': 'articles/cache.md'
+        - 'Search': 'articles/search.md'
+        - 'Security': 'articles/security.md'
+        - 'Forms': 'articles/forms.md'
+        - 'Theming': 'articles/theming.md'
+    - Advanced articles:
+        - 'Testing': 'advanced/testing.md'
+        - 'Deploy': 'advanced/deploy.md'
+        - 'Drush': 'advanced/drush.md'
+        - 'Git': 'advanced/git.md'
+    - Modules:
+        - 'Administration': 'modules/administration.md'
+        - 'Content authoring': 'modules/content.md'
+        - 'Development': 'modules/development.md'
+        - 'Site building': 'modules/building.md'
+        - 'Utilites': 'modules/utilites.md'
