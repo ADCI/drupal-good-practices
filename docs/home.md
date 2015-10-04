@@ -1,1 +1,0 @@
-# Drupal Good Practices

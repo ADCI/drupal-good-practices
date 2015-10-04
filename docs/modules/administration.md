@@ -14,6 +14,9 @@
   - [Schema](#schema)
   - [Flood control](#flood-control)
   - [Rabbit Hole](#rabbit-hole)
+  - [Google Analytics](#google-analytics)
+  - [XML sitemap](#xml-sitemap)
+  - [Transliteration](#transliteration)
 
 ## [Administration menu](https://www.drupal.org/project/admin_menu)
 
@@ -49,8 +52,12 @@
 
 ## [Backup and Migrate](https://www.drupal.org/project/backup_migrate)
 
+  - Back up and restore your Drupal MySQL database, code, and files or migrate a site between environments.
+  - Supports gzip, bzip and zip compression.
+  - Supports automatic scheduled backups.
+  - Can save to a file on the server or offsite.
   - Excellent and easy to use backup solution for small and middle projects.
-  - Do not use this module on biggest projects. CLI solutions (like the Drush) more preferred.
+  - Do not use this module on big projects. CLI solutions (like Drush) or specific solutions are more preferred.
   - Do not save backup to public access directories.
 
 ## [ThemeKey](https://www.drupal.org/project/themekey)
@@ -100,3 +107,19 @@
 ### @todo Weight vs. Nodequeue (vs. other?)
 
 ### @todo https://www.drupal.org/project/total_control ?
+
+### [Google Analytics](https://www.drupal.org/project/google_analytics)
+
+  - Adds the Google Analytics web statistics tracking system to your website.
+  - Better choice than hardcoded Google Analytics code (usually in templates) since it has a lot of configuration options and allows to track only needed roles.
+
+### [XML sitemap](https://www.drupal.org/project/xmlsitemap)
+
+  - Creates a sitemap that conforms to the sitemaps.org specification.
+  
+### [Transliteration](https://www.drupal.org/project/transliteration)
+  
+  - Provides one-way string transliteration (romanization) and cleans file names during upload by replacing unwanted characters.
+  - May be used for transliteration for URLs (when using Pathauto 2.x).
+  - Must-have.
+  

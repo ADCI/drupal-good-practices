@@ -1,4 +1,4 @@
-# Basic installation and configuration.
+# Basic installation and configuration
 
 ## Table of Contents
 
@@ -29,7 +29,7 @@ There are 2 installation profiles options available by default:
 
 Often you will not need to have *Comment* module installed.
 
-You may uninstall listed modules via [Drush](drush.md) using following commands:  
+You may uninstall listed modules via [Drush](../advanced/drush.md) using following commands:  
 *drush dis -y color, comment, dashboard, overlay, shortcut, toolbar*  
 *drush pmu -y color, comment, dashboard, overlay, shortcut, toolbar*
 

@@ -22,3 +22,4 @@
   - It's very probable that you'll have it as dependency of other modules.
   - Very helpful in dealing with nodes and other entities in your code, or if you define your own entity types.
   - Entity Token module defines tokens for defined entity types (not only for core's node, user, etc.).
+  
