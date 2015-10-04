@@ -18,20 +18,20 @@
   - [XML sitemap](#xml-sitemap)
   - [Transliteration](#transliteration)
 
-## [Administration menu](https://www.drupal.org/project/admin_menu)
+### [Administration menu](https://www.drupal.org/project/admin_menu)
 
   - Fast navigation through administration pages, administration and development tools and more.
   - Looks nice with Toolbar Style.
 
-## [Module Filter](https://www.drupal.org/project/module_filter)
+### [Module Filter](https://www.drupal.org/project/module_filter)
 
   - Greatly improves modules administration page.
 
-## [Fast Permissions Administration](https://www.drupal.org/project/fpa)
+### [Fast Permissions Administration](https://www.drupal.org/project/fpa)
 
   - Greatly improves permissions administration page.
 
-## [Features](https://www.drupal.org/project/features)
+### [Features](https://www.drupal.org/project/features)
 
   - Try to understand meaning of the "Feature" word.
   - Start machine names of your features with **feature_** prefix.
@@ -40,17 +40,17 @@
   - Remember: each feature is Drupal module so you can have some custom in it.
   - For complex custom code it's preferred to place it to separate custom module and set dependency on feature instead of having a lot of custom code in the feature.
 
-## [Administration Views](https://www.drupal.org/project/admin_views)
+### [Administration Views](https://www.drupal.org/project/admin_views)
 
   - Replaces number of core's administrative overview/listing pages with views making it possible to customize, extend these pages and add more similar pages for different purposes.
 
-## [Views Bulk Operations (VBO)](https://www.drupal.org/project/views_bulk_operations)
+### [Views Bulk Operations (VBO)](https://www.drupal.org/project/views_bulk_operations)
 
   - Augments [Views](#views) by allowing bulk operations to be executed on the displayed rows.
   - Extendable by code and [Rules](#rules).
   - Requirement for the [Administration Views](#administration-views).
 
-## [Backup and Migrate](https://www.drupal.org/project/backup_migrate)
+### [Backup and Migrate](https://www.drupal.org/project/backup_migrate)
 
   - Back up and restore your Drupal MySQL database, code, and files or migrate a site between environments.
   - Supports gzip, bzip and zip compression.
@@ -60,33 +60,31 @@
   - Do not use this module on big projects. CLI solutions (like Drush) or specific solutions are more preferred.
   - Do not save backup to public access directories.
 
-## [ThemeKey](https://www.drupal.org/project/themekey)
+### [ThemeKey](https://www.drupal.org/project/themekey)
 
   - Allows to define simple or sophisticated theme-switching rules which allow automatic selection of a theme depending on current path, taxonomy terms, language, node-type, and many, many other properties.
 
-## [Workbench Moderation](https://www.drupal.org/project/workbench_moderation)
+### [Workbench Moderation](https://www.drupal.org/project/workbench_moderation)
 
   - Adds arbitrary moderation states to Drupal core's "unpublished" and "published" node states, and affects the behavior of node revisions when nodes are published.
 
-## [Schema](https://www.drupal.org/project/schema)
+### [Schema](https://www.drupal.org/project/schema)
 
   - Compares the live database structure with the schema structure declared by all enabled modules, reporting on any missing or incorrect tables.
   - Provides hyperlinked display of the schema's embedded documentation explaining what each table and field is for.
   - Examines the live database and creates Schema API data structures for all tables that match the live database.
 
-## [Flood control](https://www.drupal.org/project/flood_control)
+### [Flood control](https://www.drupal.org/project/flood_control)
 
   - Adds an administration interface for hidden flood control variables in Drupal 7, like the login attempt limiters and any future hidden variables.
 
-## [Rabbit Hole](https://www.drupal.org/project/rabbit_hole)
+### [Rabbit Hole](https://www.drupal.org/project/rabbit_hole)
 
   - Adds the ability to control what should happen when an entity is being viewed at its own page.
   - Useful if you have a content type that never should be displayed on its own page, like an image content type that's displayed in a carousel.
   - This is not an access control module!
   - In most cases you will not need to override Rabbit Hole bundle settings on entity level.
   - If you often need to override bundle settings on entity level, make sure this module fits your needs and you do not need true access control for example.
-
-## TODO items
 
 ### [Override Node Options](https://www.drupal.org/project/override_node_options)
 
@@ -123,3 +121,12 @@
   - May be used for transliteration for URLs (when using Pathauto 2.x).
   - Must-have.
   
+### [Localization update](https://www.drupal.org/project/l10n_update)
+
+  - Automatically downloads and updates your translations by fetching them from [localize.drupal.org](https://localize.drupal.org/) or any other [Localization server](https://www.drupal.org/project/l10n_server).
+
+### [Global Redirect](https://www.drupal.org/project/globalredirect)
+
+  - Checks the current URL for an alias and does a 301 redirect to it if it is not being used.
+  - Checks the current URL for a trailing slash and removes it if present.
+  - Makes sure the case of the URL being accessed is the same as the one set by the author/administrator.

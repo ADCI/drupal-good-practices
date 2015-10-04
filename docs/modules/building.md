@@ -51,5 +51,24 @@
     ex. [Colorbox node](https://www.drupal.org/project/colorbox_node) which provides an ability to display any page inside a colorbox modal without the header and footer.
 
 ### [Entity reference](https://www.drupal.org/project/entityreference)
+  
   - Provides a field type that can reference arbitrary entities.  
   - Create relations between entities (nodes, users and other). Similar [References](https://www.drupal.org/project/references) module is **not recommended for use**.
+
+### [Field Group](https://www.drupal.org/project/field_group)
+
+  - All fieldable entities will have the possibility to add groups to wrap their fields together.
+  - Comes with default HTML wrappers like vertical tabs, horizontal tabs, accordions, fieldsets or div wrappers.
+  - May be used on both entity forms and displays.
+  - Helps noticeable improve administrion UI, especially for entities with many fields.
+  
+### [Menu block](https://www.drupal.org/project/menu_block)
+
+  - Configurable blocks of menu trees starting with any level of any menu.
+  - And more!
+  
+### [Context](https://www.drupal.org/project/context)
+
+  - Allows you to manage contextual conditions and reactions for different portions of your site.
+  - Think of conditions as a set of rules that are checked during page load to see what context is active. Any reactions that are associated with active contexts are then fired.
+  - Often used to manage blocks visibility depending on complex conditions when it's not possible to use core's blocks visibility.

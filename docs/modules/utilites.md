@@ -31,3 +31,10 @@
   - Attach all external libraries by Libraries API.
   - Exceptions are not acceptable.
   
+### [Variable](https://www.drupal.org/project/variable)
+  - Provides a registry for meta-data about Drupal variables and some extended Variable API and administration interface.
+  - Other modules can know about your module's variables and they can be translated, exported, used in views, etc.
+  - You'll get automatic variable edit forms, tokens, access control and uninstall for free.
+  - Your module's variables will be allowed for Variable Realms being able to get values for each language (Internationalization) or Domain (Variable Domain).
+  - Sometimes you'll have it just as dependency for other modules.
+  
