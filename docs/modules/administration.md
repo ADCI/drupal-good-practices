@@ -130,3 +130,7 @@
   - Checks the current URL for an alias and does a 301 redirect to it if it is not being used.
   - Checks the current URL for a trailing slash and removes it if present.
   - Makes sure the case of the URL being accessed is the same as the one set by the author/administrator.
+
+### [Redirect](https://www.drupal.org/project/redirect)
+
+  - @todo TBD. 

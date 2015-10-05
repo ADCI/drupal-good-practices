@@ -72,3 +72,58 @@
   - Allows you to manage contextual conditions and reactions for different portions of your site.
   - Think of conditions as a set of rules that are checked during page load to see what context is active. Any reactions that are associated with active contexts are then fired.
   - Often used to manage blocks visibility depending on complex conditions when it's not possible to use core's blocks visibility.
+
+### [Internationalization](https://www.drupal.org/project/i18n)
+
+  - aka i18n.
+  - Collection of modules to extend Drupal core multilingual capabilities.
+  - Taxonomy translation (both, per language terms and translatable terms).
+  - Multilingual variables.
+  - Multilingual blocks (control visibility per language and translate title and content).
+  - Language selection (when you switch the site language you'll see only the content for that language).
+  
+### [Strongarm](https://www.drupal.org/project/strongarm)
+
+  - Gives site builders a way to override the default variable values that Drupal core and contributed modules ship with.
+  - Mostly used with the [Features](https://www.drupal.org/project/features) module to export Drupal variable values.
+  
+### [Display Suite](https://www.drupal.org/project/ds)
+
+  - Allows you to take full control over how your content is displayed using a drag and drop interface.
+  - Arrange your nodes, views, comments, user data etc.
+  - Dozens of template files.
+  - A predefined list of layouts.
+  - Possibility to add your own custom fields in the backend or in your code.
+  - Possibility to add custom layouts in your theme.
+  - Overrides layouts for rendered entities.
+  - Has own templates so theme's node.tpl.php and similar are not used when Display Suite layout is used.
+  
+### [Menu attributes](https://www.drupal.org/project/menu_attributes)
+
+  - Allows you to specify some additional attributes for menu items such as id, name, class, style, and rel.
+  - Very useful when some of menu items need for individual styling (for example, links to social networks).
+
+### [Superfish](https://www.drupal.org/project/superfish)
+
+  - Integrates jQuery Superfish plugin with your Drupal menus.
+  - Dropdown menus in blocks.
+  
+### [Metatag](https://www.drupal.org/project/metatag)
+
+  - Allows you to automatically provide structured metadata, aka "meta tags", about a website.
+  - Description and keywords metadata.
+  - [Open Graph](http://ogp.me/) support  allow control of how content appears when shared on social networks (for example Facebook).
+  - And more.
+  - Most installed Drupal 7 module for metatags.
+  
+### [Field collection](https://www.drupal.org/project/field_collection)
+
+  - Provides a field-collection field, to which any number of fields can be attached.
+  - In other words it provides field type which is actually combination of several fields of any type.
+  - Internally represented as an entity, which is embedded in the host entity.
+  - Helpful in building complex fields, for example image with link.
+  
+### [Block Class](https://www.drupal.org/project/block_class)
+
+  - Allows users to add classes to any block through the block's configuration interface.
+  - Must-have. Blocks should not be styled using IDs in CSS selectors - classes much more preferred.
