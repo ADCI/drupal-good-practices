@@ -9,6 +9,17 @@
   - [Views Slideshow](#views-slideshow)
   - [Colorbox](#colorbox)
   - [Entity reference](#entity-reference)
+  - [Field Group](#field-group)
+  - [Menu block](#menu-block)
+  - [Context](#context)
+  - [Internationalization](#internationalization)
+  - [Strongarm](#strongarm)
+  - [Display Suite](#display-suite)
+  - [Menu attributes](#menu-attributes)
+  - [Superfish](#superfish)
+  - [Metatag](#metatag)
+  - [Field collection](#field-collection)
+  - [Block Class](#block-class)
   
 ### [Views](https://www.drupal.org/project/views)
 

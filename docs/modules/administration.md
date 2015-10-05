@@ -17,6 +17,9 @@
   - [Google Analytics](#google-analytics)
   - [XML sitemap](#xml-sitemap)
   - [Transliteration](#transliteration)
+  - [Localization update](#localization-update)
+  - [Global Redirect](#global-redirect)
+  - [Redirect](#redirect)
 
 ### [Administration menu](https://www.drupal.org/project/admin_menu)
 
