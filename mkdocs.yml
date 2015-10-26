@@ -3,7 +3,7 @@ pages:
   - Home: index.md
   - Articles:
     - 'Install': 'articles/install.md'
-    - 'Site building': 'articles/building.md'
+    - 'Layout building': 'articles/layout.md'
     - 'Users': 'articles/users.md'
     - 'Content authoring': 'articles/content.md'
     - 'Multilanguage': 'articles/multilanguage.md'
