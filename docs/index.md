@@ -1,3 +1,3 @@
 # Drupal Good Practices
 
-@todo Provide some intro.
+Collection of Drupal good practices, guidelines, articles, contrib modules overviews and many helpful links.
