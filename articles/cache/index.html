@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <title>Cache system - Drupal Good Practices</title>
+  
+
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/highlight.css">
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Cache system";
+    var mkdocs_page_input_path = "articles/cache.md";
+    var mkdocs_page_url = "/articles/cache/";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  <script src="../../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script>
+  <script src="../../js/theme.js"></script> 
+
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> Drupal Good Practices</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../..">Home</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Articles</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../install/">Install</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../layout/">Layout building</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../users/">Users</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../content/">Content authoring</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../multilanguage/">Multilanguage</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Cache system</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#cache-and-performance">Cache and performance</a></li>
+                
+                    <li><a class="toctree-l4" href="#table-of-contents">Table of Contents</a></li>
+                
+                    <li><a class="toctree-l4" href="#core-cache">Core cache</a></li>
+                
+                    <li><a class="toctree-l4" href="#anonymous-cache">Anonymous cache</a></li>
+                
+                    <li><a class="toctree-l4" href="#views-cache">Views cache</a></li>
+                
+                    <li><a class="toctree-l4" href="#panels-cache">Panels cache</a></li>
+                
+                    <li><a class="toctree-l4" href="#entity-cache">Entity cache</a></li>
+                
+                    <li><a class="toctree-l4" href="#external-cache-storage">External cache storage</a></li>
+                
+                    <li><a class="toctree-l4" href="#todo-http-cache-headers-basics-cache-control-etc">@todo HTTP cache headers basics (Cache-control, etc.)</a></li>
+                
+                    <li><a class="toctree-l4" href="#todo-different-cache-implementations-for-different-bins-configuration-via-settingsphp-drupalfakecache">@todo Different cache implementations for different bins configuration via settings.php. DrupalFakeCache</a></li>
+                
+                    <li><a class="toctree-l4" href="#todo-nginx-and-apache-configuration-for-caching-of-assets">@todo Nginx (and Apache?) configuration for caching of assets</a></li>
+                
+                    <li><a class="toctree-l4" href="#summary">Summary</a></li>
+                
+            
+            </ul>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../search/">Search</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../security/">Security</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../forms/">Forms</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../theming/">Theming</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Advanced articles</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../advanced/testing/">Testing</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../advanced/deploy/">Deploy</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../advanced/drush/">Drush</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../advanced/git/">Git</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Modules</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../modules/administration/">Administration</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../modules/content/">Content authoring</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../modules/development/">Development</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../modules/building/">Site building</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../modules/utilites/">Utilites</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">Drupal Good Practices</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Articles &raquo;</li>
+        
+      
+    
+    <li>Cache system</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="cache-and-performance">Cache and performance</h1>
+<h2 id="table-of-contents">Table of Contents</h2>
+<ul>
+<li><a href="#core-cache">Core cache</a></li>
+<li><a href="#anonymous-cache">Anonymous cache</a></li>
+<li><a href="#views-cache">Views cache</a></li>
+<li><a href="#panels-cache">Panels cache</a></li>
+<li><a href="#entity-cache">Entity cache</a></li>
+<li><a href="#external-cache-storage">External cache storage</a></li>
+<li><a href="#summary">Summary</a></li>
+</ul>
+<h2 id="core-cache">Core cache</h2>
+<p>Drupal core provides just a few options for caching, but even these options enabled can noticeably improve performance.</p>
+<p>Drupal core cache options are:</p>
+<ul>
+<li>Blocks cache.</li>
+<li>Full page cache (for anonymous visitors).</li>
+</ul>
+<h2 id="anonymous-cache">Anonymous cache</h2>
+<p>If there are no differences in behavior on backend for different anonymous users (which is usually true) then luckily the whole pages can be cached.
+Pages' caching which avoids Drupal run to build and render page's content drastically improves performance.
+This cache can be made even faster by using of <a href="#external-cache-storage">external storages</a> for such cache.</p>
+<h2 id="views-cache">Views cache</h2>
+<p>In almost (all) cases there is <a href="https://www.drupal.org/project/views">Views</a> module installed on a Drupal 7 site.
+Outputs built with <strong>Views</strong> can (and should) also be cached. Views is shipped with time-based cache so lifetime is set for cache and after passing this time cache become obsolete and rebuilt. Both raw query result and rendered output can be cached.</p>
+<p>You'll definitely want to show relevant content on your site and show updated or new content (almost) immediately after making changes. With default <strong>Views</strong> cache you'll have to set small enough cache lifetimes to achieve this, but performance gain will be less than it could be (cache rebuilds may happen even if there are no updates in content) and updates will still happen not immediately.
+<a href="https://www.drupal.org/project/views_content_cache">Views content cache</a> module is more preferred in this case - it provides alternative <strong>Views</strong> cache plugin which rebuilds cache when changes happen in content.</p>
+<h2 id="panels-cache">Panels cache</h2>
+<p>When using <a href="https://www.drupal.org/project/panels">Panels</a> you can leverage caching for them as well.
+<strong>Panels</strong> allow to cache the whole panel or parts of it.
+Similar to content-based caching solution for <strong>Views</strong> module, there is <a href="https://www.drupal.org/project/panels_content_cache">Panels Content Cache</a> module for <strong>Panels</strong>.</p>
+<h2 id="entity-cache"><a href="https://www.drupal.org/project/entitycache">Entity cache</a></h2>
+<p>Most of content on Drupal 7 site is stored in different types of entities (nodes, users, taxonomy terms and other) so there are always entities loaded to build and render some content on pages.
+<strong>Entity cache</strong> allows to put entire entity (with properties, fields and other data) to cache for load times improvements.
+There is no configuration for this module, just enable it to make it working. After installation the module will make core entities (nodes, users, taxonomy terms) entire cacheable, but there are many other contrib modules which define own entity types and are integrated with the <strong>Entity cache</strong>.
+Custom entity types can be easily integrated with the <strong>Entity cache</strong> as well.
+Again, module gives very good improvements when <a href="#external-cache-storage">external storages</a> are used to store entities cache. It can be used with default Drupal 7 cache storage (database) of course, but effect will be small enough.</p>
+<h2 id="external-cache-storage">External cache storage</h2>
+<p>Database is very slow solution for storing cache and it's highly recommended to use other solutions to store cache.</p>
+<h3 id="key-value-storage">Key-value storage</h3>
+<p><a href="https://www.drupal.org/project/redis">Redis</a> and <a href="https://www.drupal.org/project/memcache">Memcache</a> allows to store cache in RAM.
+Use one of this if you have enough RAM - they highly increase performance, especially in combination with <a href="#entity-cache">Entity cache</a>.</p>
+<h3 id="nosql-storage-mongodb-and-other">NoSQL storage (MongoDB and other)</h3>
+<p>It's possible to store cache for example in <a href="https://www.drupal.org/project/mongodb">MongoDB</a>.</p>
+<h3 id="page-caching">Page caching</h3>
+<p>Most effective way when dealing with caching for anonymous users is when Drupal isn't triggered at all for delivering pages content.</p>
+<p>Most popular solutions to cache pages for anonymous users on server are:</p>
+<ul>
+<li><a href="http://nginx.org/en/">Nginx</a> - web server, reverse proxy server as well as a load balancer and an HTTP cache.</li>
+<li><a href="https://www.varnish-cache.org/">Varnish</a> - very popular HTTP accelerator with a lot of configuration options.</li>
+</ul>
+<h2 id="todo-http-cache-headers-basics-cache-control-etc">@todo HTTP cache headers basics (Cache-control, etc.)</h2>
+<h2 id="todo-different-cache-implementations-for-different-bins-configuration-via-settingsphp-drupalfakecache">@todo Different cache implementations for different bins configuration via settings.php. DrupalFakeCache</h2>
+<h2 id="todo-nginx-and-apache-configuration-for-caching-of-assets">@todo Nginx (and Apache?) configuration for caching of assets</h2>
+<h2 id="summary">Summary</h2>
+<p>Always think about caching and leverage it, don't launch your Drupal sites without any caching enabled.
+Always plan your caching strategy for both anonymous and authenticated visitors, pay attention to sensitive data (for authenticated visitors) - it may happen that data for one user will be cached and accidentally shown to another one.</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../search/" class="btn btn-neutral float-right" title="Search">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../multilanguage/" class="btn btn-neutral" title="Multilanguage"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../multilanguage/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../search/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+
+</body>
+</html>

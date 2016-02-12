@@ -1,0 +1,764 @@
+{
+    "docs": [
+        {
+            "location": "/", 
+            "text": "Drupal Good Practices\n\n\nCollection of Drupal good practices, guidelines, articles, contrib modules overviews and many helpful links.", 
+            "title": "Home"
+        }, 
+        {
+            "location": "/#drupal-good-practices", 
+            "text": "Collection of Drupal good practices, guidelines, articles, contrib modules overviews and many helpful links.", 
+            "title": "Drupal Good Practices"
+        }, 
+        {
+            "location": "/articles/install/", 
+            "text": "Basic installation and configuration\n\n\nTable of Contents\n\n\n\n\nInstallation\n\n\nNot used modules\n\n\nMust-have modules\n\n\nGood-to-have modules\n\n\nBasic configuration\n\n\n\n\nInstallation\n\n\nBasic Drupal installation.\n\n\nThere are 2 installation profiles options available by default:\n\n\n\n\nStandard\n\n\nMinimal\n\n\n\n\nStandard\n is recommended option, it pre-configures misc things like \nArticle\n and \nBasic page\n content-types, a few useful text formats and so on.\n\n\nNot used modules\n\n\nIn most cases you will not need these modules\n\n\n\n\nColor\n\n\nDashboard\n\n\nOverlay\n\n\nShortcut\n\n\nToolbar\n\n\n\n\nOften you will not need to have \nComment\n module installed.\n\n\nYou may uninstall listed modules via \nDrush\n using following commands:\n\n\ndrush dis -y color, comment, dashboard, overlay, shortcut, toolbar\n\n\ndrush pmu -y color, comment, dashboard, overlay, shortcut, toolbar\n\n\nMust-have modules\n\n\nIn most cases you should have these modules installed.\n\n\n\n\nChaos tool suite (ctools)\n\n    At least you'll need it as dependency for some of other must-have modules.\n\n\nViews\n\n    Most of listings on the site like blog, news archive, related articles, front page slideshow, etc. will be built using this module.\n\n\nToken\n\n    Adds more tokens and enhances UI for core's tokens.\n\n\nPathauto\n\n    Automatically generates URL/path aliases for various kinds of content.\n\n\nGlobal Redirect\n\n    Checks the current URL for an alias and does a 301 redirect to it if it is not being used. And not only.\n\n\nAdministration menu\n\n    A time-saver for site administrators, and useful for developers and site builders.\n\n\njQuery Update\n\n    Upgrades the version of jQuery in Drupal core (from 1.4.2) to a newer version of jQuery.\n\n\nModule Filter\n\n    Greatly improves modules administration page.\n\n\nFast Permissions Administration\n\n    Similar to \nModule Filter\n but for permissions administration page.\n\n\nFeatures\n\n    Exports different site building components and bundling them together in a single feature module.\n\n\nTransliteration\n\n    Provides one-way string transliteration (romanization) and cleans file names during upload by replacing unwanted characters.\n\n\nDevel\n\n    A suite of developer helper modules.\n\n\nStrongarm\n\n    Usually used with \nFeatures\n to export Drupal variable values.\n\n\nBlock Class\n\n    Allows users to add classes to any block through the block's configuration interface.\n\n\nTitle\n\n    Convert node titles to the Field API in order to make nodes fully translatable.\n\n\nDelta\n\n    Delta Blocks submodule exposes a number of core Drupal elements as blocks.\n\n\n\n\nGood-to-have modules\n\n\nYou will need to have these modules installed very often.\n\n\n\n\nLibraries API\n\n    The common denominator for all Drupal modules/profiles/themes that integrate with external libraries.\n\n    It's most likely that you'll have it as dependency for some other modules.\n\n\nCKEditor - WYSIWYG HTML editor\n\n    Allows to replace textarea fields with the CKEditor WYSIWYG editor.\n\n    If you have rich text textarea fields then you need it.\n\n\nIMCE\n\n    Image/file uploader and browser that supports personal directories and quota.\n\n    If you have \nCKEditor\n then you probably should have it as well.\n\n\nIMCE Mkdir\n\n    Allows users to create and delete sub-directories under directories assigned by IMCE.\n\n    If you have \nIMCE\n then you should have this one as well.\n\n\nElysia Cron\n\n    Extends Drupal standard cron, allowing a fine grain control over each task.\n\n    Almost must-have.\n\n\nEntity API\n\n    Extends the entity API of Drupal core in order to provide a unified way to deal with entities and their properties.\n\n    It's very probable that you'll have it as dependency of other modules.\n\n    Must-have if you deal with nodes and other entities in your code, or if you define your own entity types.\n\n\nEntity cache\n\n    Puts core entities into Drupal's cache API.\n\n    Use with \nMemcache API and Integration\n or \nRedis\n - so if your server allows to use one of these modules then \nEntity cache\n is must-have.\n\n\nEntity reference\n\n    Provides a field type that can reference arbitrary entities.\n\n    Create relations between entities (nodes, users and other). Similar \nReferences\n module is \nnot recommended for use\n.\n\n\nRabbit Hole\n\n    Adds the ability to control what should happen when an entity is being viewed at its own page.\n\n    Useful if you have a content type that never should be displayed on its own page, like an image content type that's displayed in a carousel.\n\n\nEntity view modes\n\n    Allows administrators to define custom view modes for entities.\n\n\nBetter Formats\n\n    Adds more flexibility to Drupal's core input format system.\n\n\nField Group\n\n    All fieldable entities will have the possibility to add groups to wrap their fields together. Comes with default HTML wrappers like vertical tabs, horizontal tabs, accordions, fieldsets or div wrappers.\n\n\nRules\n\n    Allows site administrators to define conditionally executed actions based on occurring events.\n\n\nDiff\n\n    Basically shows differencies between revisions. But also very helpful for developers when dealing with \nFeatures\n, particularly with overriden features exports.\n\n\nCAPTCHA\n\n    A challenge-response test most often placed within web forms to determine whether the user is human.\n\n\nViews Bulk Operations (VBO)\n\n    Augments \nViews\n by allowing bulk operations to be executed on the displayed rows.\n\n\nAdministration Views\n\n    Replaces administrative overview/listing pages with actual views for superior usability.\n\n    Requires \nViews Bulk Operations (VBO)\n be installed.\n\n\nSearch API\n\n    Provides a framework for easily creating searches on any entity known to Drupal, using any kind of search engine. Integrated well with \nViews\n.\n\n    Recommended for building of any kind of searches on the site. Recommended for use with \nSearch API Solr Search\n. \nSearch API Database Search\n backed may be used as starter option.\n\n\nImageCache Actions\n\n    Provides a suite of additional image effects that can be added to image styles (watermarking, file format switcher, rounded corners, etc.). Also adds the 'duplicate', 'export' and 'import' actions to image styles administration.\n\n\n\n\nBasic configuration\n\n\nTitle settings\n\n\nIn the \nNode\n group check \"Title\" under \nAutomatic field replacement\n.\n\n\n@todo Label replacement and Taxonomy term settings?\n\n\nadmin/config/content/title\n\n\njQuery Update\n\n\nSet default jQuery version to at least \n1.7\n which is safe option for most of sites, newer is better.\n\nOverride default jQuery version for your admin theme - set \n1.5\n or even \n1.4\n (shipped with Drupal core). With newer versions issues in admin UI are possible.\n\n\nadmin/config/development/jquery_update\n\n\nFile system\n\n\nSet some \nPrivate file system path\n. Make sure that \nTransliteration\n options are switched on.\n\n\n@todo Disable \"Transliterate the displayed file name.\" option?\n\n\nadmin/config/media/file-system\n\n\nAccount settings\n\n\nUn-tick \"Enable user pictures.\" option under \nPERSONALIZATION\n - in most cases you will not need it, use profiles with fields instead.\n\n\nadmin/config/people/accounts\n\n\n@todo Is it easy enough to show pictures from profiles in comments for example?\n\n\nRegional settings\n\n\nSet \nDefault country\n to \"- None -\" - initially it's safiest value, then the setting may be adjusted.\n\nSet appropriate \nFirst day of week\n.\n\nSet \nDefault time zone\n to UTC.\n\nUn-tick \"Users may set their own time zone.\" - in most cases you will not need this.\n\n\nadmin/config/regional/settings\n\n\nURL aliases\n\n\nEmpty \nDefault path pattern\n in \nCONTENT PATHS\n and never set it to non-empty value.\n\nSet appropriate \nDefault path pattern\n in \nTAXONOMY TERM PATHS\n or make it empty.\n\nSet appropriate \nPattern for user account page paths\n in \nUSER PATHS\n or make it empty.\n\nSet empty patterns for content-types if nodes of these types should not be visible for regular users on their own pages (slidshow elements for example).\n\nPatterns should consist of several parts separated by \n/\n sign, for example for nodes \n[node:content-type]/[node:title]\n is good candidate. Try to avoid one-part aliases, for nodes of \nBasic Page\n content-type one-part aliases are ok (about-us, contact-us, etc.).\n\n\n/admin/config/search/path/settings\n\n\n@todo Transliterate aliases?\n\n\nadmin/config/search/path/settings\n\n\nSite information\n\n\nSet appropriate \nSite name\n and \nadmin@localhost.com\n if were not set on installation.\n\n\nadmin/config/system/site-information\n\n\nCron\n\n\n@todo Set to \"Never\" on development?\n\n\nadmin/config/system/cron\n\n\nDelta blocks\n\n\n@todo TBD\n\n\nPeople\n\n\n@todo administrator/developer role\n\n\nContent types\n\n\nEdit \nArticle\n and \nBasic page\n content types created during installation. Remove \nArticle\n content-type if you don't need it. On content-type edit pages un-tick \"Promoted to front page\" checkbox in \nPublishing options\n group. Set other settings as needed. Give attention to \nComment settings\n if you left the Comment module enabled because of needs and to \nMenu settings\n.\n\n\nadmin/structure/types\n\n\nadmin/structure/types/manage/article\n\n\nadmin/structure/types/manage/page\n\n\nReplace Title property by Title field instance on the \nMANAGE FIELDS\n pages. Remove \nImage\n and \nTags\n fields from \nArticle\n content-type if needed. Adjust display settings on the \nMANAGE DISPLAY\n pages if needed.\n\n\nadmin/structure/types/manage/article/fields\n\n\nadmin/structure/types/manage/page/fields\n\n\nFeatures\n\n\nOn the Features settings page set \nDefault export path\n under \nGENERAL SETTINGS\n to \"sites/all/modules/features\".\n\n\nadmin/structure/features/settings\n\n\nTaxonomy\n\n\nDelete \"Tags\" vocabulary if it's not needed for you.\n\n\nadmin/structure/taxonomy\n\n\nViews\n\n\nOn the Views settings page make sure the following settings are set:\n\n\n\n\nShow filters on the list of views\n\n\nShow advanced help warning\n\n\nAlways show the master display\n\n\nAlways show advanced display settings\n\n\nShow information and statistics about the view during live preview\n\n\nAbove the preview\n\n\nShow the SQL query\n\n\nShow performance statistics\n\n\nShow other queries run during render during live preview\n\n\n\n\n\n\n\n\nUn-tick \"Automatically update preview on changes\".\n\n\nadmin/structure/views/settings\n\n\nDevelopment Views settings may be also set by executing of the following \ndrush\n command:\n\n\ndrush vd\n\n\nUpdate manager\n\n\nOn the Available updates settings page check the \nCheck for updates of disabled modules and themes\n.\n\n\nadmin/reports/updates/settings\n\n\nrobots.txt\n\n\nAdd following lines to your \nrobots.txt\n file:\n\n\n/node/\n\n\n/?q=node/\n\n\nIn (almost) all cases content you want to be indexed will have path aliases.", 
+            "title": "Install"
+        }, 
+        {
+            "location": "/articles/install/#basic-installation-and-configuration", 
+            "text": "", 
+            "title": "Basic installation and configuration"
+        }, 
+        {
+            "location": "/articles/install/#table-of-contents", 
+            "text": "Installation  Not used modules  Must-have modules  Good-to-have modules  Basic configuration", 
+            "title": "Table of Contents"
+        }, 
+        {
+            "location": "/articles/install/#installation", 
+            "text": "Basic Drupal installation.  There are 2 installation profiles options available by default:   Standard  Minimal   Standard  is recommended option, it pre-configures misc things like  Article  and  Basic page  content-types, a few useful text formats and so on.", 
+            "title": "Installation"
+        }, 
+        {
+            "location": "/articles/install/#not-used-modules", 
+            "text": "In most cases you will not need these modules   Color  Dashboard  Overlay  Shortcut  Toolbar   Often you will not need to have  Comment  module installed.  You may uninstall listed modules via  Drush  using following commands:  drush dis -y color, comment, dashboard, overlay, shortcut, toolbar  drush pmu -y color, comment, dashboard, overlay, shortcut, toolbar", 
+            "title": "Not used modules"
+        }, 
+        {
+            "location": "/articles/install/#must-have-modules", 
+            "text": "In most cases you should have these modules installed.   Chaos tool suite (ctools) \n    At least you'll need it as dependency for some of other must-have modules.  Views \n    Most of listings on the site like blog, news archive, related articles, front page slideshow, etc. will be built using this module.  Token \n    Adds more tokens and enhances UI for core's tokens.  Pathauto \n    Automatically generates URL/path aliases for various kinds of content.  Global Redirect \n    Checks the current URL for an alias and does a 301 redirect to it if it is not being used. And not only.  Administration menu \n    A time-saver for site administrators, and useful for developers and site builders.  jQuery Update \n    Upgrades the version of jQuery in Drupal core (from 1.4.2) to a newer version of jQuery.  Module Filter \n    Greatly improves modules administration page.  Fast Permissions Administration \n    Similar to  Module Filter  but for permissions administration page.  Features \n    Exports different site building components and bundling them together in a single feature module.  Transliteration \n    Provides one-way string transliteration (romanization) and cleans file names during upload by replacing unwanted characters.  Devel \n    A suite of developer helper modules.  Strongarm \n    Usually used with  Features  to export Drupal variable values.  Block Class \n    Allows users to add classes to any block through the block's configuration interface.  Title \n    Convert node titles to the Field API in order to make nodes fully translatable.  Delta \n    Delta Blocks submodule exposes a number of core Drupal elements as blocks.", 
+            "title": "Must-have modules"
+        }, 
+        {
+            "location": "/articles/install/#good-to-have-modules", 
+            "text": "You will need to have these modules installed very often.   Libraries API \n    The common denominator for all Drupal modules/profiles/themes that integrate with external libraries. \n    It's most likely that you'll have it as dependency for some other modules.  CKEditor - WYSIWYG HTML editor \n    Allows to replace textarea fields with the CKEditor WYSIWYG editor. \n    If you have rich text textarea fields then you need it.  IMCE \n    Image/file uploader and browser that supports personal directories and quota. \n    If you have  CKEditor  then you probably should have it as well.  IMCE Mkdir \n    Allows users to create and delete sub-directories under directories assigned by IMCE. \n    If you have  IMCE  then you should have this one as well.  Elysia Cron \n    Extends Drupal standard cron, allowing a fine grain control over each task. \n    Almost must-have.  Entity API \n    Extends the entity API of Drupal core in order to provide a unified way to deal with entities and their properties. \n    It's very probable that you'll have it as dependency of other modules. \n    Must-have if you deal with nodes and other entities in your code, or if you define your own entity types.  Entity cache \n    Puts core entities into Drupal's cache API. \n    Use with  Memcache API and Integration  or  Redis  - so if your server allows to use one of these modules then  Entity cache  is must-have.  Entity reference \n    Provides a field type that can reference arbitrary entities. \n    Create relations between entities (nodes, users and other). Similar  References  module is  not recommended for use .  Rabbit Hole \n    Adds the ability to control what should happen when an entity is being viewed at its own page. \n    Useful if you have a content type that never should be displayed on its own page, like an image content type that's displayed in a carousel.  Entity view modes \n    Allows administrators to define custom view modes for entities.  Better Formats \n    Adds more flexibility to Drupal's core input format system.  Field Group \n    All fieldable entities will have the possibility to add groups to wrap their fields together. Comes with default HTML wrappers like vertical tabs, horizontal tabs, accordions, fieldsets or div wrappers.  Rules \n    Allows site administrators to define conditionally executed actions based on occurring events.  Diff \n    Basically shows differencies between revisions. But also very helpful for developers when dealing with  Features , particularly with overriden features exports.  CAPTCHA \n    A challenge-response test most often placed within web forms to determine whether the user is human.  Views Bulk Operations (VBO) \n    Augments  Views  by allowing bulk operations to be executed on the displayed rows.  Administration Views \n    Replaces administrative overview/listing pages with actual views for superior usability. \n    Requires  Views Bulk Operations (VBO)  be installed.  Search API \n    Provides a framework for easily creating searches on any entity known to Drupal, using any kind of search engine. Integrated well with  Views . \n    Recommended for building of any kind of searches on the site. Recommended for use with  Search API Solr Search .  Search API Database Search  backed may be used as starter option.  ImageCache Actions \n    Provides a suite of additional image effects that can be added to image styles (watermarking, file format switcher, rounded corners, etc.). Also adds the 'duplicate', 'export' and 'import' actions to image styles administration.", 
+            "title": "Good-to-have modules"
+        }, 
+        {
+            "location": "/articles/install/#basic-configuration", 
+            "text": "", 
+            "title": "Basic configuration"
+        }, 
+        {
+            "location": "/articles/install/#title-settings", 
+            "text": "In the  Node  group check \"Title\" under  Automatic field replacement .  @todo Label replacement and Taxonomy term settings?  admin/config/content/title", 
+            "title": "Title settings"
+        }, 
+        {
+            "location": "/articles/install/#jquery-update", 
+            "text": "Set default jQuery version to at least  1.7  which is safe option for most of sites, newer is better. \nOverride default jQuery version for your admin theme - set  1.5  or even  1.4  (shipped with Drupal core). With newer versions issues in admin UI are possible.  admin/config/development/jquery_update", 
+            "title": "jQuery Update"
+        }, 
+        {
+            "location": "/articles/install/#file-system", 
+            "text": "Set some  Private file system path . Make sure that  Transliteration  options are switched on.  @todo Disable \"Transliterate the displayed file name.\" option?  admin/config/media/file-system", 
+            "title": "File system"
+        }, 
+        {
+            "location": "/articles/install/#account-settings", 
+            "text": "Un-tick \"Enable user pictures.\" option under  PERSONALIZATION  - in most cases you will not need it, use profiles with fields instead.  admin/config/people/accounts  @todo Is it easy enough to show pictures from profiles in comments for example?", 
+            "title": "Account settings"
+        }, 
+        {
+            "location": "/articles/install/#regional-settings", 
+            "text": "Set  Default country  to \"- None -\" - initially it's safiest value, then the setting may be adjusted. \nSet appropriate  First day of week . \nSet  Default time zone  to UTC. \nUn-tick \"Users may set their own time zone.\" - in most cases you will not need this.  admin/config/regional/settings", 
+            "title": "Regional settings"
+        }, 
+        {
+            "location": "/articles/install/#url-aliases", 
+            "text": "Empty  Default path pattern  in  CONTENT PATHS  and never set it to non-empty value. \nSet appropriate  Default path pattern  in  TAXONOMY TERM PATHS  or make it empty. \nSet appropriate  Pattern for user account page paths  in  USER PATHS  or make it empty. \nSet empty patterns for content-types if nodes of these types should not be visible for regular users on their own pages (slidshow elements for example). \nPatterns should consist of several parts separated by  /  sign, for example for nodes  [node:content-type]/[node:title]  is good candidate. Try to avoid one-part aliases, for nodes of  Basic Page  content-type one-part aliases are ok (about-us, contact-us, etc.).  /admin/config/search/path/settings  @todo Transliterate aliases?  admin/config/search/path/settings", 
+            "title": "URL aliases"
+        }, 
+        {
+            "location": "/articles/install/#site-information", 
+            "text": "Set appropriate  Site name  and  admin@localhost.com  if were not set on installation.  admin/config/system/site-information", 
+            "title": "Site information"
+        }, 
+        {
+            "location": "/articles/install/#cron", 
+            "text": "@todo Set to \"Never\" on development?  admin/config/system/cron", 
+            "title": "Cron"
+        }, 
+        {
+            "location": "/articles/install/#delta-blocks", 
+            "text": "@todo TBD", 
+            "title": "Delta blocks"
+        }, 
+        {
+            "location": "/articles/install/#people", 
+            "text": "@todo administrator/developer role", 
+            "title": "People"
+        }, 
+        {
+            "location": "/articles/install/#content-types", 
+            "text": "Edit  Article  and  Basic page  content types created during installation. Remove  Article  content-type if you don't need it. On content-type edit pages un-tick \"Promoted to front page\" checkbox in  Publishing options  group. Set other settings as needed. Give attention to  Comment settings  if you left the Comment module enabled because of needs and to  Menu settings .  admin/structure/types  admin/structure/types/manage/article  admin/structure/types/manage/page  Replace Title property by Title field instance on the  MANAGE FIELDS  pages. Remove  Image  and  Tags  fields from  Article  content-type if needed. Adjust display settings on the  MANAGE DISPLAY  pages if needed.  admin/structure/types/manage/article/fields  admin/structure/types/manage/page/fields", 
+            "title": "Content types"
+        }, 
+        {
+            "location": "/articles/install/#features", 
+            "text": "On the Features settings page set  Default export path  under  GENERAL SETTINGS  to \"sites/all/modules/features\".  admin/structure/features/settings", 
+            "title": "Features"
+        }, 
+        {
+            "location": "/articles/install/#taxonomy", 
+            "text": "Delete \"Tags\" vocabulary if it's not needed for you.  admin/structure/taxonomy", 
+            "title": "Taxonomy"
+        }, 
+        {
+            "location": "/articles/install/#views", 
+            "text": "On the Views settings page make sure the following settings are set:   Show filters on the list of views  Show advanced help warning  Always show the master display  Always show advanced display settings  Show information and statistics about the view during live preview  Above the preview  Show the SQL query  Show performance statistics  Show other queries run during render during live preview     Un-tick \"Automatically update preview on changes\".  admin/structure/views/settings  Development Views settings may be also set by executing of the following  drush  command:  drush vd", 
+            "title": "Views"
+        }, 
+        {
+            "location": "/articles/install/#update-manager", 
+            "text": "On the Available updates settings page check the  Check for updates of disabled modules and themes .  admin/reports/updates/settings", 
+            "title": "Update manager"
+        }, 
+        {
+            "location": "/articles/install/#robotstxt", 
+            "text": "Add following lines to your  robots.txt  file:  /node/  /?q=node/  In (almost) all cases content you want to be indexed will have path aliases.", 
+            "title": "robots.txt"
+        }, 
+        {
+            "location": "/articles/layout/", 
+            "text": "Layout building\n\n\nTable of Contents\n\n\n\n\nCore blocks\n\n\nDisplay Suite\n\n\nPanels\n\n\nContext\n\n\nSummary\n\n\nLinks\n\n\n\n\nCore blocks\n\n\nThere are many blocks defined by Drupal core modules and contributed modules, you can also create blocks with content via UI using core's Block module.\nDrupal core provides simple enough blocks visibility system: blocks are assigned to (theme) regions, block visibility can be based on paths patterns or content-types.\nWhen using Drupal core blocks system, site's pages are built from blocks using visibility rules.\nThis way is simple but also less flexible - it's limited to regions (you can't configure smaller parts), one block can be assigned to only one region and in one particular order.\nBecause of such limitations Drupal core blocks visibility system will not fit your needs often.\n\n\nDisplay Suite\n\n\nDisplay Suite\n module provides possibility to create new displays for entities via UI and many options to deal with them.\nThis module operates an entity content, allows to use different layouts for different displays, add special fields to displays (add block as field, clone existing field, define new field by code, etc.) - these features and core's visibility settings for fields make this module very powerful.\nModule contains a lot of predefined layouts which can be overriden via Drupal templating/theming system, new layouts may be defined as well.\nAs it was mentioned above, the \nDisplay Suite\n module is limited to entity content.\n\n\nIf you only need to add more display modes to entities and other features are not needed (so Drupal core's fields formatting and visibility settings are enough) - check the \nEntity view modes\n module then.\n\n\nRead the \nmodule's documentation\n for more details.\n\n\nPanels\n\n\nPanels\n module gives you absolute freedom in content region layouts configuration.\nPowered by the \nChaos tool suite (ctools)\n - one of the most popular Drupal contributed module - it provides tons of features and options.\nYou can create any layout for content of any page, output needed blocks in regions (sub-regions of the content region) which you also can define.\n\n\nIn combination with \nPage manager\n module (part of the \nctools\n) you can create any pages with any content layout you need.\n\n\nRead the \nmodule's documentation\n for (much more) details.\n\n\nContext\n\n\nThe \nContext\n module name is self-explaining - it allows to perform different actions on pages depending on pages' contexts (or number of met conditions).\nProbably most used reaction on contexts is blocks visibility settings - because of many kinds of contexts which can be checked and a lot of contrinuted modules which extend its functionality it provides much more flexibility in blocks visibility configuration than Drupal core's visibility system.\nBut blocks visibility is limited to regions like Drupal core's system.\n\n\nThere are actually many other reactions of different kinds available. Check the \nproject's page\n for more info.\n\n\nSummary\n\n\nThere is no single solution which fits all possible needs. Each of mentioned solution has its pros and cons.\n\n\nLayouts building may be divided into 3 levels:\n\n\n\n\nEntities (usually nodes) content management (rendering of entities using display modes).\n\n\nContent region layout management (which is \"main\" region and is always here).\n\n\nPage's layout management (header, footer, etc.).\n\n\n\n\nDepending on site's complexity (number of kinds of content and its layout complexity) different solutions may be applied:\n\n\n\n\nOn small/simple sites Drupal core's blocks visibility system and entities/fields display system should be enough.\n\n\nIf content region part becomes complex - try building layouts and assigning blocks via \nPanels\n, and \ndisplay modes\n for nodes and other entities.\n\n\nIf other pages' regions like header and footer becomes dynamic - try adding \ncontext\n to previous point.\n\n\n\n\nJust to summarize:\n\n\n\n\nFirst of all try to leverage entities display modes for better layouts and styling (re)use.\n\n\nDifferent situations need different solution, but in cases of really complex sites it's possible to use them all in combination - don't much afraid to try this.\n\n\n\n\nLinks\n\n\n\n\nPanels, Display Suite, and Context - oh my! What to use when, why, and how", 
+            "title": "Layout building"
+        }, 
+        {
+            "location": "/articles/layout/#layout-building", 
+            "text": "", 
+            "title": "Layout building"
+        }, 
+        {
+            "location": "/articles/layout/#table-of-contents", 
+            "text": "Core blocks  Display Suite  Panels  Context  Summary  Links", 
+            "title": "Table of Contents"
+        }, 
+        {
+            "location": "/articles/layout/#core-blocks", 
+            "text": "There are many blocks defined by Drupal core modules and contributed modules, you can also create blocks with content via UI using core's Block module.\nDrupal core provides simple enough blocks visibility system: blocks are assigned to (theme) regions, block visibility can be based on paths patterns or content-types.\nWhen using Drupal core blocks system, site's pages are built from blocks using visibility rules.\nThis way is simple but also less flexible - it's limited to regions (you can't configure smaller parts), one block can be assigned to only one region and in one particular order.\nBecause of such limitations Drupal core blocks visibility system will not fit your needs often.", 
+            "title": "Core blocks"
+        }, 
+        {
+            "location": "/articles/layout/#display-suite", 
+            "text": "Display Suite  module provides possibility to create new displays for entities via UI and many options to deal with them.\nThis module operates an entity content, allows to use different layouts for different displays, add special fields to displays (add block as field, clone existing field, define new field by code, etc.) - these features and core's visibility settings for fields make this module very powerful.\nModule contains a lot of predefined layouts which can be overriden via Drupal templating/theming system, new layouts may be defined as well.\nAs it was mentioned above, the  Display Suite  module is limited to entity content.  If you only need to add more display modes to entities and other features are not needed (so Drupal core's fields formatting and visibility settings are enough) - check the  Entity view modes  module then.  Read the  module's documentation  for more details.", 
+            "title": "Display Suite"
+        }, 
+        {
+            "location": "/articles/layout/#panels", 
+            "text": "Panels  module gives you absolute freedom in content region layouts configuration.\nPowered by the  Chaos tool suite (ctools)  - one of the most popular Drupal contributed module - it provides tons of features and options.\nYou can create any layout for content of any page, output needed blocks in regions (sub-regions of the content region) which you also can define.  In combination with  Page manager  module (part of the  ctools ) you can create any pages with any content layout you need.  Read the  module's documentation  for (much more) details.", 
+            "title": "Panels"
+        }, 
+        {
+            "location": "/articles/layout/#context", 
+            "text": "The  Context  module name is self-explaining - it allows to perform different actions on pages depending on pages' contexts (or number of met conditions).\nProbably most used reaction on contexts is blocks visibility settings - because of many kinds of contexts which can be checked and a lot of contrinuted modules which extend its functionality it provides much more flexibility in blocks visibility configuration than Drupal core's visibility system.\nBut blocks visibility is limited to regions like Drupal core's system.  There are actually many other reactions of different kinds available. Check the  project's page  for more info.", 
+            "title": "Context"
+        }, 
+        {
+            "location": "/articles/layout/#summary", 
+            "text": "There is no single solution which fits all possible needs. Each of mentioned solution has its pros and cons.  Layouts building may be divided into 3 levels:   Entities (usually nodes) content management (rendering of entities using display modes).  Content region layout management (which is \"main\" region and is always here).  Page's layout management (header, footer, etc.).   Depending on site's complexity (number of kinds of content and its layout complexity) different solutions may be applied:   On small/simple sites Drupal core's blocks visibility system and entities/fields display system should be enough.  If content region part becomes complex - try building layouts and assigning blocks via  Panels , and  display modes  for nodes and other entities.  If other pages' regions like header and footer becomes dynamic - try adding  context  to previous point.   Just to summarize:   First of all try to leverage entities display modes for better layouts and styling (re)use.  Different situations need different solution, but in cases of really complex sites it's possible to use them all in combination - don't much afraid to try this.", 
+            "title": "Summary"
+        }, 
+        {
+            "location": "/articles/layout/#links", 
+            "text": "Panels, Display Suite, and Context - oh my! What to use when, why, and how", 
+            "title": "Links"
+        }, 
+        {
+            "location": "/articles/users/", 
+            "text": "Users", 
+            "title": "Users"
+        }, 
+        {
+            "location": "/articles/users/#users", 
+            "text": "", 
+            "title": "Users"
+        }, 
+        {
+            "location": "/articles/content/", 
+            "text": "Content authoring", 
+            "title": "Content authoring"
+        }, 
+        {
+            "location": "/articles/content/#content-authoring", 
+            "text": "", 
+            "title": "Content authoring"
+        }, 
+        {
+            "location": "/articles/multilanguage/", 
+            "text": "Multilanguage", 
+            "title": "Multilanguage"
+        }, 
+        {
+            "location": "/articles/multilanguage/#multilanguage", 
+            "text": "", 
+            "title": "Multilanguage"
+        }, 
+        {
+            "location": "/articles/cache/", 
+            "text": "Cache and performance\n\n\nTable of Contents\n\n\n\n\nCore cache\n\n\nAnonymous cache\n\n\nViews cache\n\n\nPanels cache\n\n\nEntity cache\n\n\nExternal cache storage\n\n\nSummary\n\n\n\n\nCore cache\n\n\nDrupal core provides just a few options for caching, but even these options enabled can noticeably improve performance.\n\n\nDrupal core cache options are:\n\n\n\n\nBlocks cache.\n\n\nFull page cache (for anonymous visitors).\n\n\n\n\nAnonymous cache\n\n\nIf there are no differences in behavior on backend for different anonymous users (which is usually true) then luckily the whole pages can be cached.\nPages' caching which avoids Drupal run to build and render page's content drastically improves performance.\nThis cache can be made even faster by using of \nexternal storages\n for such cache.\n\n\nViews cache\n\n\nIn almost (all) cases there is \nViews\n module installed on a Drupal 7 site.\nOutputs built with \nViews\n can (and should) also be cached. Views is shipped with time-based cache so lifetime is set for cache and after passing this time cache become obsolete and rebuilt. Both raw query result and rendered output can be cached.\n\n\nYou'll definitely want to show relevant content on your site and show updated or new content (almost) immediately after making changes. With default \nViews\n cache you'll have to set small enough cache lifetimes to achieve this, but performance gain will be less than it could be (cache rebuilds may happen even if there are no updates in content) and updates will still happen not immediately.\n\nViews content cache\n module is more preferred in this case - it provides alternative \nViews\n cache plugin which rebuilds cache when changes happen in content.\n\n\nPanels cache\n\n\nWhen using \nPanels\n you can leverage caching for them as well.\n\nPanels\n allow to cache the whole panel or parts of it.\nSimilar to content-based caching solution for \nViews\n module, there is \nPanels Content Cache\n module for \nPanels\n.\n\n\nEntity cache\n\n\nMost of content on Drupal 7 site is stored in different types of entities (nodes, users, taxonomy terms and other) so there are always entities loaded to build and render some content on pages.\n\nEntity cache\n allows to put entire entity (with properties, fields and other data) to cache for load times improvements.\nThere is no configuration for this module, just enable it to make it working. After installation the module will make core entities (nodes, users, taxonomy terms) entire cacheable, but there are many other contrib modules which define own entity types and are integrated with the \nEntity cache\n.\nCustom entity types can be easily integrated with the \nEntity cache\n as well.\nAgain, module gives very good improvements when \nexternal storages\n are used to store entities cache. It can be used with default Drupal 7 cache storage (database) of course, but effect will be small enough.\n\n\nExternal cache storage\n\n\nDatabase is very slow solution for storing cache and it's highly recommended to use other solutions to store cache.\n\n\nKey-value storage\n\n\nRedis\n and \nMemcache\n allows to store cache in RAM.\nUse one of this if you have enough RAM - they highly increase performance, especially in combination with \nEntity cache\n.\n\n\nNoSQL storage (MongoDB and other)\n\n\nIt's possible to store cache for example in \nMongoDB\n.\n\n\nPage caching\n\n\nMost effective way when dealing with caching for anonymous users is when Drupal isn't triggered at all for delivering pages content.\n\n\nMost popular solutions to cache pages for anonymous users on server are:\n\n\n\n\nNginx\n - web server, reverse proxy server as well as a load balancer and an HTTP cache.\n\n\nVarnish\n - very popular HTTP accelerator with a lot of configuration options.\n\n\n\n\n@todo HTTP cache headers basics (Cache-control, etc.)\n\n\n@todo Different cache implementations for different bins configuration via settings.php. DrupalFakeCache\n\n\n@todo Nginx (and Apache?) configuration for caching of assets\n\n\nSummary\n\n\nAlways think about caching and leverage it, don't launch your Drupal sites without any caching enabled.\nAlways plan your caching strategy for both anonymous and authenticated visitors, pay attention to sensitive data (for authenticated visitors) - it may happen that data for one user will be cached and accidentally shown to another one.", 
+            "title": "Cache system"
+        }, 
+        {
+            "location": "/articles/cache/#cache-and-performance", 
+            "text": "", 
+            "title": "Cache and performance"
+        }, 
+        {
+            "location": "/articles/cache/#table-of-contents", 
+            "text": "Core cache  Anonymous cache  Views cache  Panels cache  Entity cache  External cache storage  Summary", 
+            "title": "Table of Contents"
+        }, 
+        {
+            "location": "/articles/cache/#core-cache", 
+            "text": "Drupal core provides just a few options for caching, but even these options enabled can noticeably improve performance.  Drupal core cache options are:   Blocks cache.  Full page cache (for anonymous visitors).", 
+            "title": "Core cache"
+        }, 
+        {
+            "location": "/articles/cache/#anonymous-cache", 
+            "text": "If there are no differences in behavior on backend for different anonymous users (which is usually true) then luckily the whole pages can be cached.\nPages' caching which avoids Drupal run to build and render page's content drastically improves performance.\nThis cache can be made even faster by using of  external storages  for such cache.", 
+            "title": "Anonymous cache"
+        }, 
+        {
+            "location": "/articles/cache/#views-cache", 
+            "text": "In almost (all) cases there is  Views  module installed on a Drupal 7 site.\nOutputs built with  Views  can (and should) also be cached. Views is shipped with time-based cache so lifetime is set for cache and after passing this time cache become obsolete and rebuilt. Both raw query result and rendered output can be cached.  You'll definitely want to show relevant content on your site and show updated or new content (almost) immediately after making changes. With default  Views  cache you'll have to set small enough cache lifetimes to achieve this, but performance gain will be less than it could be (cache rebuilds may happen even if there are no updates in content) and updates will still happen not immediately. Views content cache  module is more preferred in this case - it provides alternative  Views  cache plugin which rebuilds cache when changes happen in content.", 
+            "title": "Views cache"
+        }, 
+        {
+            "location": "/articles/cache/#panels-cache", 
+            "text": "When using  Panels  you can leverage caching for them as well. Panels  allow to cache the whole panel or parts of it.\nSimilar to content-based caching solution for  Views  module, there is  Panels Content Cache  module for  Panels .", 
+            "title": "Panels cache"
+        }, 
+        {
+            "location": "/articles/cache/#entity-cache", 
+            "text": "Most of content on Drupal 7 site is stored in different types of entities (nodes, users, taxonomy terms and other) so there are always entities loaded to build and render some content on pages. Entity cache  allows to put entire entity (with properties, fields and other data) to cache for load times improvements.\nThere is no configuration for this module, just enable it to make it working. After installation the module will make core entities (nodes, users, taxonomy terms) entire cacheable, but there are many other contrib modules which define own entity types and are integrated with the  Entity cache .\nCustom entity types can be easily integrated with the  Entity cache  as well.\nAgain, module gives very good improvements when  external storages  are used to store entities cache. It can be used with default Drupal 7 cache storage (database) of course, but effect will be small enough.", 
+            "title": "Entity cache"
+        }, 
+        {
+            "location": "/articles/cache/#external-cache-storage", 
+            "text": "Database is very slow solution for storing cache and it's highly recommended to use other solutions to store cache.", 
+            "title": "External cache storage"
+        }, 
+        {
+            "location": "/articles/cache/#key-value-storage", 
+            "text": "Redis  and  Memcache  allows to store cache in RAM.\nUse one of this if you have enough RAM - they highly increase performance, especially in combination with  Entity cache .", 
+            "title": "Key-value storage"
+        }, 
+        {
+            "location": "/articles/cache/#nosql-storage-mongodb-and-other", 
+            "text": "It's possible to store cache for example in  MongoDB .", 
+            "title": "NoSQL storage (MongoDB and other)"
+        }, 
+        {
+            "location": "/articles/cache/#page-caching", 
+            "text": "Most effective way when dealing with caching for anonymous users is when Drupal isn't triggered at all for delivering pages content.  Most popular solutions to cache pages for anonymous users on server are:   Nginx  - web server, reverse proxy server as well as a load balancer and an HTTP cache.  Varnish  - very popular HTTP accelerator with a lot of configuration options.", 
+            "title": "Page caching"
+        }, 
+        {
+            "location": "/articles/cache/#todo-http-cache-headers-basics-cache-control-etc", 
+            "text": "", 
+            "title": "@todo HTTP cache headers basics (Cache-control, etc.)"
+        }, 
+        {
+            "location": "/articles/cache/#todo-different-cache-implementations-for-different-bins-configuration-via-settingsphp-drupalfakecache", 
+            "text": "", 
+            "title": "@todo Different cache implementations for different bins configuration via settings.php. DrupalFakeCache"
+        }, 
+        {
+            "location": "/articles/cache/#todo-nginx-and-apache-configuration-for-caching-of-assets", 
+            "text": "", 
+            "title": "@todo Nginx (and Apache?) configuration for caching of assets"
+        }, 
+        {
+            "location": "/articles/cache/#summary", 
+            "text": "Always think about caching and leverage it, don't launch your Drupal sites without any caching enabled.\nAlways plan your caching strategy for both anonymous and authenticated visitors, pay attention to sensitive data (for authenticated visitors) - it may happen that data for one user will be cached and accidentally shown to another one.", 
+            "title": "Summary"
+        }, 
+        {
+            "location": "/articles/search/", 
+            "text": "Search\n\n\nTable of Contents\n\n\n\n\nCore Search\n\n\nApache Solr Search\n\n\nSearch API\n\n\nSummary\n\n\n\n\nCore Search\n\n\nDrupal core contains \nSearch\n module for search functionality.\n\nSearch\n module provides separate search page with search form and block with search form which can be placed anywhere on the site and which leads to this single search page on submission.\nThe module stores indexed data in the site's database which may noticeably affect on performance, only core's entities may be indexed (without writing custom code) and output configuration is very limited.\n\n\nSearch\n module may fit the needs on small sites. It's not recommended for use on medium and large sites, when there are a lot of content to search through and/or several kinds of search functionality are presented.\n\n\nApache Solr Search\n\n\nThis module doesn't have disadvantages that Drupal core's \nSearch\n module does, so:\n\n\n\n\nSearch output is fully customizable.\n\n\nThere may be many search pages.\n\n\nFaceted search via \nFacet API\n\n\nMore entity types can be indexed (some via additional contrib modules), any other entity types can be easily made indexable by implementing a few hooks.\n\n\n\n\nBut of course main advantage of the module is:\n\n\n\n\nIndexed data IS NOT stored in database.\n\n\n\n\nApache Solr Search\n module allows to drastically improve search performance (on small amounts of data it'll be less noticeable) and perform full-text search.\n\n\nMain disadvantage is that the module is limited to \nApache Solr\n search platform so if it cannot be installed/used for some reason then module will not work for you as well.\n\n\nSearch API\n\n\nSearch API\n is probably the best solution for search on Drupal 7.\nThis module is framework, it's generic, very flexible and extendable.\nModule's functionality is build on top of entity metadata wrappers (provided by \nEntity API\n module) so basically any entity can be indexed.\nSearch backends are implemented as separate modules, current implementations inlcudes \nDatabase Search\n, \nSolr Search\n and many more.\n\n\nAdvantages of the module:\n\n\n\n\n(Almost) all of advantages of the \nApache Solr Search\n module.\n\n\nOutputs can be built via \nViews\n, exposed filters are fully-functional in this case.\n\n\nThere may be many indexes and many search backends used at the same time.\n\n\nFor particular search index you can switch search backend to another one at any time.\n\n\nIn most of use cases UI will be 100% enough for needed functionality configuration.\n\n\nIndex data may be processed or altered using special filters.\n\n\nSearch servers, data sources, filters - all can be defined in nice way via PHP classes.\n\n\n\n\nSummary\n\n\nSearch API\n module is probably the best search for Drupal 7 so it's highly recommended for use on any site.\nEven if database powered search is ok for your needs, with \nSearch API\n you'll be able to easily switch to any of many other search backends if needs will change.", 
+            "title": "Search"
+        }, 
+        {
+            "location": "/articles/search/#search", 
+            "text": "", 
+            "title": "Search"
+        }, 
+        {
+            "location": "/articles/search/#table-of-contents", 
+            "text": "Core Search  Apache Solr Search  Search API  Summary", 
+            "title": "Table of Contents"
+        }, 
+        {
+            "location": "/articles/search/#core-search", 
+            "text": "Drupal core contains  Search  module for search functionality. Search  module provides separate search page with search form and block with search form which can be placed anywhere on the site and which leads to this single search page on submission.\nThe module stores indexed data in the site's database which may noticeably affect on performance, only core's entities may be indexed (without writing custom code) and output configuration is very limited.  Search  module may fit the needs on small sites. It's not recommended for use on medium and large sites, when there are a lot of content to search through and/or several kinds of search functionality are presented.", 
+            "title": "Core Search"
+        }, 
+        {
+            "location": "/articles/search/#apache-solr-search", 
+            "text": "This module doesn't have disadvantages that Drupal core's  Search  module does, so:   Search output is fully customizable.  There may be many search pages.  Faceted search via  Facet API  More entity types can be indexed (some via additional contrib modules), any other entity types can be easily made indexable by implementing a few hooks.   But of course main advantage of the module is:   Indexed data IS NOT stored in database.   Apache Solr Search  module allows to drastically improve search performance (on small amounts of data it'll be less noticeable) and perform full-text search.  Main disadvantage is that the module is limited to  Apache Solr  search platform so if it cannot be installed/used for some reason then module will not work for you as well.", 
+            "title": "Apache Solr Search"
+        }, 
+        {
+            "location": "/articles/search/#search-api", 
+            "text": "Search API  is probably the best solution for search on Drupal 7.\nThis module is framework, it's generic, very flexible and extendable.\nModule's functionality is build on top of entity metadata wrappers (provided by  Entity API  module) so basically any entity can be indexed.\nSearch backends are implemented as separate modules, current implementations inlcudes  Database Search ,  Solr Search  and many more.  Advantages of the module:   (Almost) all of advantages of the  Apache Solr Search  module.  Outputs can be built via  Views , exposed filters are fully-functional in this case.  There may be many indexes and many search backends used at the same time.  For particular search index you can switch search backend to another one at any time.  In most of use cases UI will be 100% enough for needed functionality configuration.  Index data may be processed or altered using special filters.  Search servers, data sources, filters - all can be defined in nice way via PHP classes.", 
+            "title": "Search API"
+        }, 
+        {
+            "location": "/articles/search/#summary", 
+            "text": "Search API  module is probably the best search for Drupal 7 so it's highly recommended for use on any site.\nEven if database powered search is ok for your needs, with  Search API  you'll be able to easily switch to any of many other search backends if needs will change.", 
+            "title": "Summary"
+        }, 
+        {
+            "location": "/articles/security/", 
+            "text": "Security", 
+            "title": "Security"
+        }, 
+        {
+            "location": "/articles/security/#security", 
+            "text": "", 
+            "title": "Security"
+        }, 
+        {
+            "location": "/articles/forms/", 
+            "text": "Forms", 
+            "title": "Forms"
+        }, 
+        {
+            "location": "/articles/forms/#forms", 
+            "text": "", 
+            "title": "Forms"
+        }, 
+        {
+            "location": "/articles/theming/", 
+            "text": "Theming\n\n\nInherit your site's theme from some base theme. Most popular base themes:\n\n\n\n\nZen\n\n\nOmega\n\n\nBootstrap\n\n\nAdaptiveTheme\n\n\n\n\nFollow \nCSS formatting guidelines\n.\nAlso see \n\nCSS architecture\n, \n\nCSS file organization\n and \n\nSMACSS\n.\n\n\nMake sure your theme adds \nblock-[module]-[delta]\n class to blocks to avoid usage of IDs in CSS selectors.\n\nFor styling needs also add more classes to blocks via \nBlock Class\n module, add more classes and customize markup in Views via Views UI.\n\n\n@todo CSS preprocessors, postprocessors, etc.", 
+            "title": "Theming"
+        }, 
+        {
+            "location": "/articles/theming/#theming", 
+            "text": "Inherit your site's theme from some base theme. Most popular base themes:   Zen  Omega  Bootstrap  AdaptiveTheme   Follow  CSS formatting guidelines .\nAlso see  CSS architecture ,  CSS file organization  and  SMACSS .  Make sure your theme adds  block-[module]-[delta]  class to blocks to avoid usage of IDs in CSS selectors. \nFor styling needs also add more classes to blocks via  Block Class  module, add more classes and customize markup in Views via Views UI.  @todo CSS preprocessors, postprocessors, etc.", 
+            "title": "Theming"
+        }, 
+        {
+            "location": "/advanced/testing/", 
+            "text": "Testing", 
+            "title": "Testing"
+        }, 
+        {
+            "location": "/advanced/testing/#testing", 
+            "text": "", 
+            "title": "Testing"
+        }, 
+        {
+            "location": "/advanced/deploy/", 
+            "text": "Deployment", 
+            "title": "Deploy"
+        }, 
+        {
+            "location": "/advanced/deploy/#deployment", 
+            "text": "", 
+            "title": "Deployment"
+        }, 
+        {
+            "location": "/advanced/drush/", 
+            "text": "Drush\n\n\nComplete \ndrush\n documentation is available on \ndrush.org\n.\n\nFor list of available commands see \ndrushcommands.com\n.", 
+            "title": "Drush"
+        }, 
+        {
+            "location": "/advanced/drush/#drush", 
+            "text": "Complete  drush  documentation is available on  drush.org . \nFor list of available commands see  drushcommands.com .", 
+            "title": "Drush"
+        }, 
+        {
+            "location": "/advanced/git/", 
+            "text": "Git\n\n\nTable of Contents\n\n\n\n\nInstallation\n\n\nConfiguration\n\n\nDocumentation\n\n\nGit flows\n\n\nTools\n\n\n\n\nInstallation\n\n\n\n\nLinux\n\n\nWindows\n\n\n\n\nConfiguration\n\n\n\n\nReference\n\n\nBook\n\n\n\n\nDocumentation\n\n\nFor available git commands, options and examples see \nAPI Reference\n.\n\nFor more descriptive info on commands, usege and internals see \n\"Pro GIT\" book\n.\n\n\nGit flows.\n\n\n\n\nBranching workflow\n and \nMaintaining a Project\n available on \ngit-scm\n.\n\n\nGitHub Flow\n\n\nComparing Workflows\n on \nAtlassian\n.\n\n\n\"A successful Git branching model\"\n\n\n\"A (Simpler) Successful Git Branching Model\"\n\n\nA pragmatic guide to the Branch Per Feature git branching strategy\n\n\n\n\nTools\n\n\n@todo TBD", 
+            "title": "Git"
+        }, 
+        {
+            "location": "/advanced/git/#git", 
+            "text": "", 
+            "title": "Git"
+        }, 
+        {
+            "location": "/advanced/git/#table-of-contents", 
+            "text": "Installation  Configuration  Documentation  Git flows  Tools", 
+            "title": "Table of Contents"
+        }, 
+        {
+            "location": "/advanced/git/#installation", 
+            "text": "Linux  Windows", 
+            "title": "Installation"
+        }, 
+        {
+            "location": "/advanced/git/#configuration", 
+            "text": "Reference  Book", 
+            "title": "Configuration"
+        }, 
+        {
+            "location": "/advanced/git/#documentation", 
+            "text": "For available git commands, options and examples see  API Reference . \nFor more descriptive info on commands, usege and internals see  \"Pro GIT\" book .", 
+            "title": "Documentation"
+        }, 
+        {
+            "location": "/advanced/git/#git-flows", 
+            "text": "Branching workflow  and  Maintaining a Project  available on  git-scm .  GitHub Flow  Comparing Workflows  on  Atlassian .  \"A successful Git branching model\"  \"A (Simpler) Successful Git Branching Model\"  A pragmatic guide to the Branch Per Feature git branching strategy", 
+            "title": "Git flows."
+        }, 
+        {
+            "location": "/advanced/git/#tools", 
+            "text": "@todo TBD", 
+            "title": "Tools"
+        }, 
+        {
+            "location": "/modules/administration/", 
+            "text": "Administration\n\n\nTable of Contents\n\n\n\n\nAdministration menu\n\n\nModule Filter\n\n\nFast Permissions Administration\n\n\nFeatures\n\n\nAdministration Views\n\n\nViews Bulk Operations (VBO)\n\n\nBackup and Migrate\n\n\nThemeKey\n\n\nWorkbench Moderation\n\n\nSchema\n\n\nFlood control\n\n\nRabbit Hole\n\n\nGoogle Analytics\n\n\nXML sitemap\n\n\nTransliteration\n\n\nLocalization update\n\n\nGlobal Redirect\n\n\nRedirect\n\n\n\n\nAdministration menu\n\n\n\n\nFast navigation through administration pages, administration and development tools and more.\n\n\nLooks nice with Toolbar Style.\n\n\n\n\nModule Filter\n\n\n\n\nGreatly improves modules administration page.\n\n\n\n\nFast Permissions Administration\n\n\n\n\nGreatly improves permissions administration page.\n\n\n\n\nFeatures\n\n\n\n\nTry to understand meaning of the \"Feature\" word.\n\n\nStart machine names of your features with \nfeature_\n prefix.\n\n\nPlace your features to \nsites/all/modules/features\n or \nsites/[site]/modules/features\n directory.\n\n\nSet another modules package for your features (ex \"Custom Features\")\n\n\nRemember: each feature is Drupal module so you can have some custom in it.\n\n\nFor complex custom code it's preferred to place it to separate custom module and set dependency on feature instead of having a lot of custom code in the feature.\n\n\n\n\nAdministration Views\n\n\n\n\nReplaces number of core's administrative overview/listing pages with views making it possible to customize, extend these pages and add more similar pages for different purposes.\n\n\n\n\nViews Bulk Operations (VBO)\n\n\n\n\nAugments \nViews\n by allowing bulk operations to be executed on the displayed rows.\n\n\nExtendable by code and \nRules\n.\n\n\nRequirement for the \nAdministration Views\n.\n\n\n\n\nBackup and Migrate\n\n\n\n\nBack up and restore your Drupal MySQL database, code, and files or migrate a site between environments.\n\n\nSupports gzip, bzip and zip compression.\n\n\nSupports automatic scheduled backups.\n\n\nCan save to a file on the server or offsite.\n\n\nExcellent and easy to use backup solution for small and middle projects.\n\n\nDo not use this module on big projects. CLI solutions (like Drush) or specific solutions are more preferred.\n\n\nDo not save backup to public access directories.\n\n\n\n\nThemeKey\n\n\n\n\nAllows to define simple or sophisticated theme-switching rules which allow automatic selection of a theme depending on current path, taxonomy terms, language, node-type, and many, many other properties.\n\n\n\n\nWorkbench Moderation\n\n\n\n\nAdds arbitrary moderation states to Drupal core's \"unpublished\" and \"published\" node states, and affects the behavior of node revisions when nodes are published.\n\n\n\n\nSchema\n\n\n\n\nCompares the live database structure with the schema structure declared by all enabled modules, reporting on any missing or incorrect tables.\n\n\nProvides hyperlinked display of the schema's embedded documentation explaining what each table and field is for.\n\n\nExamines the live database and creates Schema API data structures for all tables that match the live database.\n\n\n\n\nFlood control\n\n\n\n\nAdds an administration interface for hidden flood control variables in Drupal 7, like the login attempt limiters and any future hidden variables.\n\n\n\n\nRabbit Hole\n\n\n\n\nAdds the ability to control what should happen when an entity is being viewed at its own page.\n\n\nUseful if you have a content type that never should be displayed on its own page, like an image content type that's displayed in a carousel.\n\n\nThis is not an access control module!\n\n\nIn most cases you will not need to override Rabbit Hole bundle settings on entity level.\n\n\nIf you often need to override bundle settings on entity level, make sure this module fits your needs and you do not need true access control for example.\n\n\n\n\nOverride Node Options\n\n\n@todo Is it really helpful?\n\n\nViews data export\n\n\n@todo TBD\n\n\nDiff\n\n\n@todo TBD\n\n\nUltimate Cron\n\n\n@todo TBD\n\n\n@todo Weight vs. Nodequeue (vs. other?)\n\n\n@todo https://www.drupal.org/project/total_control ?\n\n\nGoogle Analytics\n\n\n\n\nAdds the Google Analytics web statistics tracking system to your website.\n\n\nBetter choice than hardcoded Google Analytics code (usually in templates) since it has a lot of configuration options and allows to track only needed roles.\n\n\n\n\nXML sitemap\n\n\n\n\nCreates a sitemap that conforms to the sitemaps.org specification.\n\n\n\n\nTransliteration\n\n\n\n\nProvides one-way string transliteration (romanization) and cleans file names during upload by replacing unwanted characters.\n\n\nMay be used for transliteration for URLs (when using Pathauto 2.x).\n\n\nMust-have.\n\n\n\n\nLocalization update\n\n\n\n\nAutomatically downloads and updates your translations by fetching them from \nlocalize.drupal.org\n or any other \nLocalization server\n.\n\n\n\n\nGlobal Redirect\n\n\n\n\nChecks the current URL for an alias and does a 301 redirect to it if it is not being used.\n\n\nChecks the current URL for a trailing slash and removes it if present.\n\n\nMakes sure the case of the URL being accessed is the same as the one set by the author/administrator.\n\n\n\n\nRedirect\n\n\n\n\n@todo TBD.", 
+            "title": "Administration"
+        }, 
+        {
+            "location": "/modules/administration/#administration", 
+            "text": "", 
+            "title": "Administration"
+        }, 
+        {
+            "location": "/modules/administration/#table-of-contents", 
+            "text": "Administration menu  Module Filter  Fast Permissions Administration  Features  Administration Views  Views Bulk Operations (VBO)  Backup and Migrate  ThemeKey  Workbench Moderation  Schema  Flood control  Rabbit Hole  Google Analytics  XML sitemap  Transliteration  Localization update  Global Redirect  Redirect", 
+            "title": "Table of Contents"
+        }, 
+        {
+            "location": "/modules/administration/#administration-menu", 
+            "text": "Fast navigation through administration pages, administration and development tools and more.  Looks nice with Toolbar Style.", 
+            "title": "Administration menu"
+        }, 
+        {
+            "location": "/modules/administration/#module-filter", 
+            "text": "Greatly improves modules administration page.", 
+            "title": "Module Filter"
+        }, 
+        {
+            "location": "/modules/administration/#fast-permissions-administration", 
+            "text": "Greatly improves permissions administration page.", 
+            "title": "Fast Permissions Administration"
+        }, 
+        {
+            "location": "/modules/administration/#features", 
+            "text": "Try to understand meaning of the \"Feature\" word.  Start machine names of your features with  feature_  prefix.  Place your features to  sites/all/modules/features  or  sites/[site]/modules/features  directory.  Set another modules package for your features (ex \"Custom Features\")  Remember: each feature is Drupal module so you can have some custom in it.  For complex custom code it's preferred to place it to separate custom module and set dependency on feature instead of having a lot of custom code in the feature.", 
+            "title": "Features"
+        }, 
+        {
+            "location": "/modules/administration/#administration-views", 
+            "text": "Replaces number of core's administrative overview/listing pages with views making it possible to customize, extend these pages and add more similar pages for different purposes.", 
+            "title": "Administration Views"
+        }, 
+        {
+            "location": "/modules/administration/#views-bulk-operations-vbo", 
+            "text": "Augments  Views  by allowing bulk operations to be executed on the displayed rows.  Extendable by code and  Rules .  Requirement for the  Administration Views .", 
+            "title": "Views Bulk Operations (VBO)"
+        }, 
+        {
+            "location": "/modules/administration/#backup-and-migrate", 
+            "text": "Back up and restore your Drupal MySQL database, code, and files or migrate a site between environments.  Supports gzip, bzip and zip compression.  Supports automatic scheduled backups.  Can save to a file on the server or offsite.  Excellent and easy to use backup solution for small and middle projects.  Do not use this module on big projects. CLI solutions (like Drush) or specific solutions are more preferred.  Do not save backup to public access directories.", 
+            "title": "Backup and Migrate"
+        }, 
+        {
+            "location": "/modules/administration/#themekey", 
+            "text": "Allows to define simple or sophisticated theme-switching rules which allow automatic selection of a theme depending on current path, taxonomy terms, language, node-type, and many, many other properties.", 
+            "title": "ThemeKey"
+        }, 
+        {
+            "location": "/modules/administration/#workbench-moderation", 
+            "text": "Adds arbitrary moderation states to Drupal core's \"unpublished\" and \"published\" node states, and affects the behavior of node revisions when nodes are published.", 
+            "title": "Workbench Moderation"
+        }, 
+        {
+            "location": "/modules/administration/#schema", 
+            "text": "Compares the live database structure with the schema structure declared by all enabled modules, reporting on any missing or incorrect tables.  Provides hyperlinked display of the schema's embedded documentation explaining what each table and field is for.  Examines the live database and creates Schema API data structures for all tables that match the live database.", 
+            "title": "Schema"
+        }, 
+        {
+            "location": "/modules/administration/#flood-control", 
+            "text": "Adds an administration interface for hidden flood control variables in Drupal 7, like the login attempt limiters and any future hidden variables.", 
+            "title": "Flood control"
+        }, 
+        {
+            "location": "/modules/administration/#rabbit-hole", 
+            "text": "Adds the ability to control what should happen when an entity is being viewed at its own page.  Useful if you have a content type that never should be displayed on its own page, like an image content type that's displayed in a carousel.  This is not an access control module!  In most cases you will not need to override Rabbit Hole bundle settings on entity level.  If you often need to override bundle settings on entity level, make sure this module fits your needs and you do not need true access control for example.", 
+            "title": "Rabbit Hole"
+        }, 
+        {
+            "location": "/modules/administration/#override-node-options", 
+            "text": "@todo Is it really helpful?", 
+            "title": "Override Node Options"
+        }, 
+        {
+            "location": "/modules/administration/#views-data-export", 
+            "text": "@todo TBD", 
+            "title": "Views data export"
+        }, 
+        {
+            "location": "/modules/administration/#diff", 
+            "text": "@todo TBD", 
+            "title": "Diff"
+        }, 
+        {
+            "location": "/modules/administration/#ultimate-cron", 
+            "text": "@todo TBD", 
+            "title": "Ultimate Cron"
+        }, 
+        {
+            "location": "/modules/administration/#todo-weight-vs-nodequeue-vs-other", 
+            "text": "", 
+            "title": "@todo Weight vs. Nodequeue (vs. other?)"
+        }, 
+        {
+            "location": "/modules/administration/#todo-httpswwwdrupalorgprojecttotal_control", 
+            "text": "", 
+            "title": "@todo https://www.drupal.org/project/total_control ?"
+        }, 
+        {
+            "location": "/modules/administration/#google-analytics", 
+            "text": "Adds the Google Analytics web statistics tracking system to your website.  Better choice than hardcoded Google Analytics code (usually in templates) since it has a lot of configuration options and allows to track only needed roles.", 
+            "title": "Google Analytics"
+        }, 
+        {
+            "location": "/modules/administration/#xml-sitemap", 
+            "text": "Creates a sitemap that conforms to the sitemaps.org specification.", 
+            "title": "XML sitemap"
+        }, 
+        {
+            "location": "/modules/administration/#transliteration", 
+            "text": "Provides one-way string transliteration (romanization) and cleans file names during upload by replacing unwanted characters.  May be used for transliteration for URLs (when using Pathauto 2.x).  Must-have.", 
+            "title": "Transliteration"
+        }, 
+        {
+            "location": "/modules/administration/#localization-update", 
+            "text": "Automatically downloads and updates your translations by fetching them from  localize.drupal.org  or any other  Localization server .", 
+            "title": "Localization update"
+        }, 
+        {
+            "location": "/modules/administration/#global-redirect", 
+            "text": "Checks the current URL for an alias and does a 301 redirect to it if it is not being used.  Checks the current URL for a trailing slash and removes it if present.  Makes sure the case of the URL being accessed is the same as the one set by the author/administrator.", 
+            "title": "Global Redirect"
+        }, 
+        {
+            "location": "/modules/administration/#redirect", 
+            "text": "@todo TBD.", 
+            "title": "Redirect"
+        }, 
+        {
+            "location": "/modules/content/", 
+            "text": "Content authoring\n\n\nTable of Contents\n\n\n\n\nIMCE\n\n\nPathauto\n\n\nCKEditor\n\n\n\n\nIMCE\n\n\n\n\nImage/file uploader and browser that supports personal directories and quota.\n\n\nIf you have \nCKEditor\n then you probably should have it as well.\n\n\nIMCE Mkdir\n addition is highly recommended.\n\n\nYou should configure default IMCE profile for uploading files to non-root directory.\n\n\nYou should configure at least one more IMCE profile in addition to 2 default profiles.\n\n\n\n\nPathauto\n\n\n\n\nDo not use default \"content\" path for Node\n\n\n\n\nCKEditor - WYSIWYG HTML editor\n\n\n\n\nAllows to replace textarea fields with the CKEditor WYSIWYG editor.\n\n\nMost installed WYSIWYG editor in Drupal.\n\n\nCKEditor\n library is well mainained, has a lot of plugins to extend functionality and many skins available.\n\n\nDefault Drupal 8 WYSIWYG editor.", 
+            "title": "Content authoring"
+        }, 
+        {
+            "location": "/modules/content/#content-authoring", 
+            "text": "", 
+            "title": "Content authoring"
+        }, 
+        {
+            "location": "/modules/content/#table-of-contents", 
+            "text": "IMCE  Pathauto  CKEditor", 
+            "title": "Table of Contents"
+        }, 
+        {
+            "location": "/modules/content/#imce", 
+            "text": "Image/file uploader and browser that supports personal directories and quota.  If you have  CKEditor  then you probably should have it as well.  IMCE Mkdir  addition is highly recommended.  You should configure default IMCE profile for uploading files to non-root directory.  You should configure at least one more IMCE profile in addition to 2 default profiles.", 
+            "title": "IMCE"
+        }, 
+        {
+            "location": "/modules/content/#pathauto", 
+            "text": "Do not use default \"content\" path for Node", 
+            "title": "Pathauto"
+        }, 
+        {
+            "location": "/modules/content/#ckeditor-wysiwyg-html-editor", 
+            "text": "Allows to replace textarea fields with the CKEditor WYSIWYG editor.  Most installed WYSIWYG editor in Drupal.  CKEditor  library is well mainained, has a lot of plugins to extend functionality and many skins available.  Default Drupal 8 WYSIWYG editor.", 
+            "title": "CKEditor - WYSIWYG HTML editor"
+        }, 
+        {
+            "location": "/modules/development/", 
+            "text": "Development\n\n\nTable of Contents\n\n\n\n\nDevel\n\n\nMasquerade\n\n\nEntity API\n\n\n\n\nDevel\n\n\n\n\nA set of development helper tools for debugging, content generation, etc.\n\n\n\n\nMasquerade\n\n\n\n\nallows site administrators to switch users and surf the site as that user (no password required).\n\n\nHelpful for site developers when trying to determine what a client, logged in as themselves, might see when logged into the site.\n\n\n@todo Do not use on production?\n\n\n\n\nEntity API\n\n\n\n\nExtends the entity API of Drupal core in order to provide a unified way to deal with entities and their properties.\n\n\nIt's very probable that you'll have it as dependency of other modules.\n\n\nVery helpful in dealing with nodes and other entities in your code, or if you define your own entity types.\n\n\nEntity Token module defines tokens for defined entity types (not only for core's node, user, etc.).", 
+            "title": "Development"
+        }, 
+        {
+            "location": "/modules/development/#development", 
+            "text": "", 
+            "title": "Development"
+        }, 
+        {
+            "location": "/modules/development/#table-of-contents", 
+            "text": "Devel  Masquerade  Entity API", 
+            "title": "Table of Contents"
+        }, 
+        {
+            "location": "/modules/development/#devel", 
+            "text": "A set of development helper tools for debugging, content generation, etc.", 
+            "title": "Devel"
+        }, 
+        {
+            "location": "/modules/development/#masquerade", 
+            "text": "allows site administrators to switch users and surf the site as that user (no password required).  Helpful for site developers when trying to determine what a client, logged in as themselves, might see when logged into the site.  @todo Do not use on production?", 
+            "title": "Masquerade"
+        }, 
+        {
+            "location": "/modules/development/#entity-api", 
+            "text": "Extends the entity API of Drupal core in order to provide a unified way to deal with entities and their properties.  It's very probable that you'll have it as dependency of other modules.  Very helpful in dealing with nodes and other entities in your code, or if you define your own entity types.  Entity Token module defines tokens for defined entity types (not only for core's node, user, etc.).", 
+            "title": "Entity API"
+        }, 
+        {
+            "location": "/modules/building/", 
+            "text": "Site building\n\n\nTable of Contents\n\n\n\n\nViews\n\n\nDate\n\n\nWebform\n\n\nlink\n\n\nViews Slideshow\n\n\nColorbox\n\n\nEntity reference\n\n\nField Group\n\n\nMenu block\n\n\nContext\n\n\nInternationalization\n\n\nStrongarm\n\n\nDisplay Suite\n\n\nMenu attributes\n\n\nSuperfish\n\n\nMetatag\n\n\nField collection\n\n\nBlock Class\n\n\n\n\nViews\n\n\n\n\nAdequate machine names for your views and displays.\n\n\nView and displays names should talk about where and how they will be used.\n\n\nWrite a little descriptions for view and displays.\n\n\nContent cache\n for Node, Time based cache for another entity types.\n\n\nAttach your views to features.\n\n\nAdd CSS class to displays.\n\n\n\n\nDate\n\n\n\n\nFlexible date/time field type Date field.\n\n\nDate API that other modules can use.\n\n\n\n\nWebform\n\n\n\n\nThe module for making forms and surveys. Often used for misc contact forms.\n\n\nAfter a submission, users may be sent an e-mail \"receipt\" as well as sending a notification to administrators.\n\n\nResults can be exported into Excel or other spreadsheet applications.\n\n\nAlso provides some basic statistical review and has an extensive API for expanding its features.\n\n\nDoes not use Drupal 7 Fields and Entities, has its own API, implementations and integrations - so it may be more lightweight solution, but sometimes it creates limitations on extendability.\n\n\n\n\nLink\n\n\n\n\nField type for links.\n\n\n\n\nViews Slideshow\n\n\n\n\nCan be used to create a slideshow of any content (not just images) that can appear in a View.\n\n\nHeavily customizable.\n\n\nMany contributes modules extend its functionality and provide more kinds of slideshow.\n\n\n\n\nColorbox\n\n\n\n\nProbides Colorbox - light-weight customizable lightbox plugin for jQuery - integration into Drupal.\n\n\nImages, iframed or inline content etc. can be displayed in a overlay above the current page.\n\n\nMost installed Drupal 7 lightbox module.\n\n\nThere are many modules which support Colorbox or extend its functionality.\n\n    ex. \nColorbox node\n which provides an ability to display any page inside a colorbox modal without the header and footer.\n\n\n\n\nEntity reference\n\n\n\n\nProvides a field type that can reference arbitrary entities.  \n\n\nCreate relations between entities (nodes, users and other). Similar \nReferences\n module is \nnot recommended for use\n.\n\n\n\n\nField Group\n\n\n\n\nAll fieldable entities will have the possibility to add groups to wrap their fields together.\n\n\nComes with default HTML wrappers like vertical tabs, horizontal tabs, accordions, fieldsets or div wrappers.\n\n\nMay be used on both entity forms and displays.\n\n\nHelps noticeable improve administrion UI, especially for entities with many fields.\n\n\n\n\nMenu block\n\n\n\n\nConfigurable blocks of menu trees starting with any level of any menu.\n\n\nAnd more!\n\n\n\n\nContext\n\n\n\n\nAllows you to manage contextual conditions and reactions for different portions of your site.\n\n\nThink of conditions as a set of rules that are checked during page load to see what context is active. Any reactions that are associated with active contexts are then fired.\n\n\nOften used to manage blocks visibility depending on complex conditions when it's not possible to use core's blocks visibility.\n\n\n\n\nInternationalization\n\n\n\n\naka i18n.\n\n\nCollection of modules to extend Drupal core multilingual capabilities.\n\n\nTaxonomy translation (both, per language terms and translatable terms).\n\n\nMultilingual variables.\n\n\nMultilingual blocks (control visibility per language and translate title and content).\n\n\nLanguage selection (when you switch the site language you'll see only the content for that language).\n\n\n\n\nStrongarm\n\n\n\n\nGives site builders a way to override the default variable values that Drupal core and contributed modules ship with.\n\n\nMostly used with the \nFeatures\n module to export Drupal variable values.\n\n\n\n\nDisplay Suite\n\n\n\n\nAllows you to take full control over how your content is displayed using a drag and drop interface.\n\n\nArrange your nodes, views, comments, user data etc.\n\n\nDozens of template files.\n\n\nA predefined list of layouts.\n\n\nPossibility to add your own custom fields in the backend or in your code.\n\n\nPossibility to add custom layouts in your theme.\n\n\nOverrides layouts for rendered entities.\n\n\nHas own templates so theme's node.tpl.php and similar are not used when Display Suite layout is used.\n\n\n\n\nMenu attributes\n\n\n\n\nAllows you to specify some additional attributes for menu items such as id, name, class, style, and rel.\n\n\nVery useful when some of menu items need for individual styling (for example, links to social networks).\n\n\n\n\nSuperfish\n\n\n\n\nIntegrates jQuery Superfish plugin with your Drupal menus.\n\n\nDropdown menus in blocks.\n\n\n\n\nMetatag\n\n\n\n\nAllows you to automatically provide structured metadata, aka \"meta tags\", about a website.\n\n\nDescription and keywords metadata.\n\n\nOpen Graph\n support  allow control of how content appears when shared on social networks (for example Facebook).\n\n\nAnd more.\n\n\nMost installed Drupal 7 module for metatags.\n\n\n\n\nField collection\n\n\n\n\nProvides a field-collection field, to which any number of fields can be attached.\n\n\nIn other words it provides field type which is actually combination of several fields of any type.\n\n\nInternally represented as an entity, which is embedded in the host entity.\n\n\nHelpful in building complex fields, for example image with link.\n\n\n\n\nBlock Class\n\n\n\n\nAllows users to add classes to any block through the block's configuration interface.\n\n\nMust-have. Blocks should not be styled using IDs in CSS selectors - classes much more preferred.", 
+            "title": "Site building"
+        }, 
+        {
+            "location": "/modules/building/#site-building", 
+            "text": "", 
+            "title": "Site building"
+        }, 
+        {
+            "location": "/modules/building/#table-of-contents", 
+            "text": "Views  Date  Webform  link  Views Slideshow  Colorbox  Entity reference  Field Group  Menu block  Context  Internationalization  Strongarm  Display Suite  Menu attributes  Superfish  Metatag  Field collection  Block Class", 
+            "title": "Table of Contents"
+        }, 
+        {
+            "location": "/modules/building/#views", 
+            "text": "Adequate machine names for your views and displays.  View and displays names should talk about where and how they will be used.  Write a little descriptions for view and displays.  Content cache  for Node, Time based cache for another entity types.  Attach your views to features.  Add CSS class to displays.", 
+            "title": "Views"
+        }, 
+        {
+            "location": "/modules/building/#date", 
+            "text": "Flexible date/time field type Date field.  Date API that other modules can use.", 
+            "title": "Date"
+        }, 
+        {
+            "location": "/modules/building/#webform", 
+            "text": "The module for making forms and surveys. Often used for misc contact forms.  After a submission, users may be sent an e-mail \"receipt\" as well as sending a notification to administrators.  Results can be exported into Excel or other spreadsheet applications.  Also provides some basic statistical review and has an extensive API for expanding its features.  Does not use Drupal 7 Fields and Entities, has its own API, implementations and integrations - so it may be more lightweight solution, but sometimes it creates limitations on extendability.", 
+            "title": "Webform"
+        }, 
+        {
+            "location": "/modules/building/#link", 
+            "text": "Field type for links.", 
+            "title": "Link"
+        }, 
+        {
+            "location": "/modules/building/#views-slideshow", 
+            "text": "Can be used to create a slideshow of any content (not just images) that can appear in a View.  Heavily customizable.  Many contributes modules extend its functionality and provide more kinds of slideshow.", 
+            "title": "Views Slideshow"
+        }, 
+        {
+            "location": "/modules/building/#colorbox", 
+            "text": "Probides Colorbox - light-weight customizable lightbox plugin for jQuery - integration into Drupal.  Images, iframed or inline content etc. can be displayed in a overlay above the current page.  Most installed Drupal 7 lightbox module.  There are many modules which support Colorbox or extend its functionality. \n    ex.  Colorbox node  which provides an ability to display any page inside a colorbox modal without the header and footer.", 
+            "title": "Colorbox"
+        }, 
+        {
+            "location": "/modules/building/#entity-reference", 
+            "text": "Provides a field type that can reference arbitrary entities.    Create relations between entities (nodes, users and other). Similar  References  module is  not recommended for use .", 
+            "title": "Entity reference"
+        }, 
+        {
+            "location": "/modules/building/#field-group", 
+            "text": "All fieldable entities will have the possibility to add groups to wrap their fields together.  Comes with default HTML wrappers like vertical tabs, horizontal tabs, accordions, fieldsets or div wrappers.  May be used on both entity forms and displays.  Helps noticeable improve administrion UI, especially for entities with many fields.", 
+            "title": "Field Group"
+        }, 
+        {
+            "location": "/modules/building/#menu-block", 
+            "text": "Configurable blocks of menu trees starting with any level of any menu.  And more!", 
+            "title": "Menu block"
+        }, 
+        {
+            "location": "/modules/building/#context", 
+            "text": "Allows you to manage contextual conditions and reactions for different portions of your site.  Think of conditions as a set of rules that are checked during page load to see what context is active. Any reactions that are associated with active contexts are then fired.  Often used to manage blocks visibility depending on complex conditions when it's not possible to use core's blocks visibility.", 
+            "title": "Context"
+        }, 
+        {
+            "location": "/modules/building/#internationalization", 
+            "text": "aka i18n.  Collection of modules to extend Drupal core multilingual capabilities.  Taxonomy translation (both, per language terms and translatable terms).  Multilingual variables.  Multilingual blocks (control visibility per language and translate title and content).  Language selection (when you switch the site language you'll see only the content for that language).", 
+            "title": "Internationalization"
+        }, 
+        {
+            "location": "/modules/building/#strongarm", 
+            "text": "Gives site builders a way to override the default variable values that Drupal core and contributed modules ship with.  Mostly used with the  Features  module to export Drupal variable values.", 
+            "title": "Strongarm"
+        }, 
+        {
+            "location": "/modules/building/#display-suite", 
+            "text": "Allows you to take full control over how your content is displayed using a drag and drop interface.  Arrange your nodes, views, comments, user data etc.  Dozens of template files.  A predefined list of layouts.  Possibility to add your own custom fields in the backend or in your code.  Possibility to add custom layouts in your theme.  Overrides layouts for rendered entities.  Has own templates so theme's node.tpl.php and similar are not used when Display Suite layout is used.", 
+            "title": "Display Suite"
+        }, 
+        {
+            "location": "/modules/building/#menu-attributes", 
+            "text": "Allows you to specify some additional attributes for menu items such as id, name, class, style, and rel.  Very useful when some of menu items need for individual styling (for example, links to social networks).", 
+            "title": "Menu attributes"
+        }, 
+        {
+            "location": "/modules/building/#superfish", 
+            "text": "Integrates jQuery Superfish plugin with your Drupal menus.  Dropdown menus in blocks.", 
+            "title": "Superfish"
+        }, 
+        {
+            "location": "/modules/building/#metatag", 
+            "text": "Allows you to automatically provide structured metadata, aka \"meta tags\", about a website.  Description and keywords metadata.  Open Graph  support  allow control of how content appears when shared on social networks (for example Facebook).  And more.  Most installed Drupal 7 module for metatags.", 
+            "title": "Metatag"
+        }, 
+        {
+            "location": "/modules/building/#field-collection", 
+            "text": "Provides a field-collection field, to which any number of fields can be attached.  In other words it provides field type which is actually combination of several fields of any type.  Internally represented as an entity, which is embedded in the host entity.  Helpful in building complex fields, for example image with link.", 
+            "title": "Field collection"
+        }, 
+        {
+            "location": "/modules/building/#block-class", 
+            "text": "Allows users to add classes to any block through the block's configuration interface.  Must-have. Blocks should not be styled using IDs in CSS selectors - classes much more preferred.", 
+            "title": "Block Class"
+        }, 
+        {
+            "location": "/modules/utilites/", 
+            "text": "Utilities\n\n\nTable of Contents\n\n\n\n\nChaos tool suite (ctools)\n\n\nToken\n\n\njQuery Update\n\n\nLibraries API\n\n\nVariable\n\n\n\n\nChaos tool suite (ctools)\n\n\n\n\nA set of APIs and tools to improve the developer experience.\n\n\nRequirement for a lot of modules.\n\n\nPlugins -- tools to make it easy for modules to let other modules implement plugins from.\n\n\nExportables -- tools to make it easier for modules to have objects that live in database or live in code, such as 'default views'.\n\n\nModal dialog -- tool to make it simple to put a form in a modal dialog.\n\n\nAdditional AJAX commands.\n\n\nA lot lot more.\n\n\n\n\nToken\n\n\n\n\nExtends Drupal 7 tokens system by adding some UI components, defining more tokens and other.\n\n\n\n\njQuery Update\n\n\n\n\nSet default jQuery version to at least \n1.7\n which is safe option for most of sites, newer is better.\n\n\nOverride default jQuery version for your admin theme - set \n1.5\n or even \n1.4\n (shipped with Drupal core). With newer versions issues in admin UI are possible.\n\n\n\n\nLibraries API\n\n\n\n\nAttach all external libraries by Libraries API.\n\n\nExceptions are not acceptable.\n\n\n\n\nVariable\n\n\n\n\nProvides a registry for meta-data about Drupal variables and some extended Variable API and administration interface.\n\n\nOther modules can know about your module's variables and they can be translated, exported, used in views, etc.\n\n\nYou'll get automatic variable edit forms, tokens, access control and uninstall for free.\n\n\nYour module's variables will be allowed for Variable Realms being able to get values for each language (Internationalization) or Domain (Variable Domain).\n\n\nSometimes you'll have it just as dependency for other modules.", 
+            "title": "Utilites"
+        }, 
+        {
+            "location": "/modules/utilites/#utilities", 
+            "text": "", 
+            "title": "Utilities"
+        }, 
+        {
+            "location": "/modules/utilites/#table-of-contents", 
+            "text": "Chaos tool suite (ctools)  Token  jQuery Update  Libraries API  Variable", 
+            "title": "Table of Contents"
+        }, 
+        {
+            "location": "/modules/utilites/#chaos-tool-suite-ctools", 
+            "text": "A set of APIs and tools to improve the developer experience.  Requirement for a lot of modules.  Plugins -- tools to make it easy for modules to let other modules implement plugins from.  Exportables -- tools to make it easier for modules to have objects that live in database or live in code, such as 'default views'.  Modal dialog -- tool to make it simple to put a form in a modal dialog.  Additional AJAX commands.  A lot lot more.", 
+            "title": "Chaos tool suite (ctools)"
+        }, 
+        {
+            "location": "/modules/utilites/#token", 
+            "text": "Extends Drupal 7 tokens system by adding some UI components, defining more tokens and other.", 
+            "title": "Token"
+        }, 
+        {
+            "location": "/modules/utilites/#jquery-update", 
+            "text": "Set default jQuery version to at least  1.7  which is safe option for most of sites, newer is better.  Override default jQuery version for your admin theme - set  1.5  or even  1.4  (shipped with Drupal core). With newer versions issues in admin UI are possible.", 
+            "title": "jQuery Update"
+        }, 
+        {
+            "location": "/modules/utilites/#libraries-api", 
+            "text": "Attach all external libraries by Libraries API.  Exceptions are not acceptable.", 
+            "title": "Libraries API"
+        }, 
+        {
+            "location": "/modules/utilites/#variable", 
+            "text": "Provides a registry for meta-data about Drupal variables and some extended Variable API and administration interface.  Other modules can know about your module's variables and they can be translated, exported, used in views, etc.  You'll get automatic variable edit forms, tokens, access control and uninstall for free.  Your module's variables will be allowed for Variable Realms being able to get values for each language (Internationalization) or Domain (Variable Domain).  Sometimes you'll have it just as dependency for other modules.", 
+            "title": "Variable"
+        }
+    ]
+}

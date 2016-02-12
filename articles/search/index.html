@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <title>Search - Drupal Good Practices</title>
+  
+
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/highlight.css">
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Search";
+    var mkdocs_page_input_path = "articles/search.md";
+    var mkdocs_page_url = "/articles/search/";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  <script src="../../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script>
+  <script src="../../js/theme.js"></script> 
+
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> Drupal Good Practices</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../..">Home</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Articles</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../install/">Install</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../layout/">Layout building</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../users/">Users</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../content/">Content authoring</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../multilanguage/">Multilanguage</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../cache/">Cache system</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Search</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#search">Search</a></li>
+                
+                    <li><a class="toctree-l4" href="#table-of-contents">Table of Contents</a></li>
+                
+                    <li><a class="toctree-l4" href="#core-search">Core Search</a></li>
+                
+                    <li><a class="toctree-l4" href="#apache-solr-search">Apache Solr Search</a></li>
+                
+                    <li><a class="toctree-l4" href="#search-api">Search API</a></li>
+                
+                    <li><a class="toctree-l4" href="#summary">Summary</a></li>
+                
+            
+            </ul>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../security/">Security</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../forms/">Forms</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../theming/">Theming</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Advanced articles</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../advanced/testing/">Testing</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../advanced/deploy/">Deploy</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../advanced/drush/">Drush</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../advanced/git/">Git</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Modules</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../modules/administration/">Administration</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../modules/content/">Content authoring</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../modules/development/">Development</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../modules/building/">Site building</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../modules/utilites/">Utilites</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">Drupal Good Practices</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Articles &raquo;</li>
+        
+      
+    
+    <li>Search</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="search">Search</h1>
+<h2 id="table-of-contents">Table of Contents</h2>
+<ul>
+<li><a href="#core-search">Core Search</a></li>
+<li><a href="#apache-solr-search">Apache Solr Search</a></li>
+<li><a href="#search-api">Search API</a></li>
+<li><a href="#summary">Summary</a></li>
+</ul>
+<h2 id="core-search">Core Search</h2>
+<p>Drupal core contains <strong>Search</strong> module for search functionality.
+<strong>Search</strong> module provides separate search page with search form and block with search form which can be placed anywhere on the site and which leads to this single search page on submission.
+The module stores indexed data in the site's database which may noticeably affect on performance, only core's entities may be indexed (without writing custom code) and output configuration is very limited.</p>
+<p><strong>Search</strong> module may fit the needs on small sites. It's not recommended for use on medium and large sites, when there are a lot of content to search through and/or several kinds of search functionality are presented.</p>
+<h2 id="apache-solr-search"><a href="https://www.drupal.org/project/apachesolr">Apache Solr Search</a></h2>
+<p>This module doesn't have disadvantages that Drupal core's <strong>Search</strong> module does, so:</p>
+<ul>
+<li>Search output is fully customizable.</li>
+<li>There may be many search pages.</li>
+<li>Faceted search via <a href="https://www.drupal.org/project/facetapi">Facet API</a></li>
+<li>More entity types can be indexed (some via additional contrib modules), any other entity types can be easily made indexable by implementing a few hooks.</li>
+</ul>
+<p>But of course main advantage of the module is:</p>
+<ul>
+<li><strong>Indexed data IS NOT stored in database.</strong></li>
+</ul>
+<p><strong>Apache Solr Search</strong> module allows to drastically improve search performance (on small amounts of data it'll be less noticeable) and perform full-text search.</p>
+<p>Main disadvantage is that the module is limited to <a href="http://lucene.apache.org/solr/">Apache Solr</a> search platform so if it cannot be installed/used for some reason then module will not work for you as well.</p>
+<h2 id="search-api"><a href="https://www.drupal.org/project/search_api">Search API</a></h2>
+<p><strong>Search API</strong> is probably the best solution for search on Drupal 7.
+This module is framework, it's generic, very flexible and extendable.
+Module's functionality is build on top of entity metadata wrappers (provided by <a href="https://www.drupal.org/project/entity">Entity API</a> module) so basically any entity can be indexed.
+Search backends are implemented as separate modules, current implementations inlcudes <a href="https://www.drupal.org/project/search_api_db">Database Search</a>, <a href="https://www.drupal.org/project/search_api_solr">Solr Search</a> and many more.</p>
+<p>Advantages of the module:</p>
+<ul>
+<li>(Almost) all of advantages of the <strong>Apache Solr Search</strong> module.</li>
+<li>Outputs can be built via <a href="https://www.drupal.org/project/views">Views</a>, exposed filters are fully-functional in this case.</li>
+<li>There may be many indexes and many search backends used at the same time.</li>
+<li>For particular search index you can switch search backend to another one at any time.</li>
+<li>In most of use cases UI will be 100% enough for needed functionality configuration.</li>
+<li>Index data may be processed or altered using special filters.</li>
+<li>Search servers, data sources, filters - all can be defined in nice way via PHP classes.</li>
+</ul>
+<h2 id="summary">Summary</h2>
+<p><strong>Search API</strong> module is probably the best search for Drupal 7 so it's highly recommended for use on any site.
+Even if database powered search is ok for your needs, with <strong>Search API</strong> you'll be able to easily switch to any of many other search backends if needs will change.</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../security/" class="btn btn-neutral float-right" title="Security">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../cache/" class="btn btn-neutral" title="Cache system"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../cache/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../security/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <title>Layout building - Drupal Good Practices</title>
+  
+
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/highlight.css">
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Layout building";
+    var mkdocs_page_input_path = "articles/layout.md";
+    var mkdocs_page_url = "/articles/layout/";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  <script src="../../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script>
+  <script src="../../js/theme.js"></script> 
+
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> Drupal Good Practices</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../..">Home</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Articles</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../install/">Install</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Layout building</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#layout-building">Layout building</a></li>
+                
+                    <li><a class="toctree-l4" href="#table-of-contents">Table of Contents</a></li>
+                
+                    <li><a class="toctree-l4" href="#core-blocks">Core blocks</a></li>
+                
+                    <li><a class="toctree-l4" href="#display-suite">Display Suite</a></li>
+                
+                    <li><a class="toctree-l4" href="#panels">Panels</a></li>
+                
+                    <li><a class="toctree-l4" href="#context">Context</a></li>
+                
+                    <li><a class="toctree-l4" href="#summary">Summary</a></li>
+                
+                    <li><a class="toctree-l4" href="#links">Links</a></li>
+                
+            
+            </ul>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../users/">Users</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../content/">Content authoring</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../multilanguage/">Multilanguage</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../cache/">Cache system</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../search/">Search</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../security/">Security</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../forms/">Forms</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../theming/">Theming</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Advanced articles</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../advanced/testing/">Testing</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../advanced/deploy/">Deploy</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../advanced/drush/">Drush</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../advanced/git/">Git</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Modules</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../modules/administration/">Administration</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../modules/content/">Content authoring</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../modules/development/">Development</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../modules/building/">Site building</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../modules/utilites/">Utilites</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">Drupal Good Practices</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Articles &raquo;</li>
+        
+      
+    
+    <li>Layout building</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="layout-building">Layout building</h1>
+<h2 id="table-of-contents">Table of Contents</h2>
+<ul>
+<li><a href="#core-blocks">Core blocks</a></li>
+<li><a href="#display-suite">Display Suite</a></li>
+<li><a href="#panels">Panels</a></li>
+<li><a href="#context">Context</a></li>
+<li><a href="#summary">Summary</a></li>
+<li><a href="#links">Links</a></li>
+</ul>
+<h2 id="core-blocks">Core blocks</h2>
+<p>There are many blocks defined by Drupal core modules and contributed modules, you can also create blocks with content via UI using core's Block module.
+Drupal core provides simple enough blocks visibility system: blocks are assigned to (theme) regions, block visibility can be based on paths patterns or content-types.
+When using Drupal core blocks system, site's pages are built from blocks using visibility rules.
+This way is simple but also less flexible - it's limited to regions (you can't configure smaller parts), one block can be assigned to only one region and in one particular order.
+Because of such limitations Drupal core blocks visibility system will not fit your needs often.</p>
+<h2 id="display-suite">Display Suite</h2>
+<p><a href="https://www.drupal.org/project/ds">Display Suite</a> module provides possibility to create new displays for entities via UI and many options to deal with them.
+This module operates an entity content, allows to use different layouts for different displays, add special fields to displays (add block as field, clone existing field, define new field by code, etc.) - these features and core's visibility settings for fields make this module very powerful.
+Module contains a lot of predefined layouts which can be overriden via Drupal templating/theming system, new layouts may be defined as well.
+As it was mentioned above, the <strong>Display Suite</strong> module is limited to entity content.</p>
+<p>If you only need to add more display modes to entities and other features are not needed (so Drupal core's fields formatting and visibility settings are enough) - check the <a href="https://www.drupal.org/project/entity_view_mode">Entity view modes</a> module then.</p>
+<p>Read the <a href="https://www.drupal.org/node/644662">module's documentation</a> for more details.</p>
+<h2 id="panels">Panels</h2>
+<p><a href="https://www.drupal.org/project/panels">Panels</a> module gives you absolute freedom in content region layouts configuration.
+Powered by the <a href="https://www.drupal.org/project/ctools">Chaos tool suite (ctools)</a> - one of the most popular Drupal contributed module - it provides tons of features and options.
+You can create any layout for content of any page, output needed blocks in regions (sub-regions of the content region) which you also can define.</p>
+<p>In combination with <strong>Page manager</strong> module (part of the <strong>ctools</strong>) you can create any pages with any content layout you need.</p>
+<p>Read the <a href="https://www.drupal.org/node/496278">module's documentation</a> for (much more) details.</p>
+<h2 id="context">Context</h2>
+<p>The <a href="https://www.drupal.org/project/context">Context</a> module name is self-explaining - it allows to perform different actions on pages depending on pages' contexts (or number of met conditions).
+Probably most used reaction on contexts is blocks visibility settings - because of many kinds of contexts which can be checked and a lot of contrinuted modules which extend its functionality it provides much more flexibility in blocks visibility configuration than Drupal core's visibility system.
+But blocks visibility is limited to regions like Drupal core's system.</p>
+<p>There are actually many other reactions of different kinds available. Check the <a href="https://www.drupal.org/project/context">project's page</a> for more info.</p>
+<h2 id="summary">Summary</h2>
+<p>There is no single solution which fits all possible needs. Each of mentioned solution has its pros and cons.</p>
+<p>Layouts building may be divided into 3 levels:</p>
+<ol>
+<li>Entities (usually nodes) content management (rendering of entities using display modes).</li>
+<li>Content region layout management (which is "main" region and is always here).</li>
+<li>Page's layout management (header, footer, etc.).</li>
+</ol>
+<p>Depending on site's complexity (number of kinds of content and its layout complexity) different solutions may be applied:</p>
+<ol>
+<li>On small/simple sites Drupal core's blocks visibility system and entities/fields display system should be enough.</li>
+<li>If content region part becomes complex - try building layouts and assigning blocks via <strong>Panels</strong>, and <strong>display modes</strong> for nodes and other entities.</li>
+<li>If other pages' regions like header and footer becomes dynamic - try adding <strong>context</strong> to previous point.</li>
+</ol>
+<p>Just to summarize:</p>
+<ul>
+<li>First of all try to leverage entities display modes for better layouts and styling (re)use.</li>
+<li>Different situations need different solution, but in cases of really complex sites it's possible to use them all in combination - don't much afraid to try this.</li>
+</ul>
+<h2 id="links">Links</h2>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=Hc1ujlWlA0c">Panels, Display Suite, and Context - oh my! What to use when, why, and how</a></li>
+</ul>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../users/" class="btn btn-neutral float-right" title="Users">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../install/" class="btn btn-neutral" title="Install"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../install/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../users/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+
+</body>
+</html>

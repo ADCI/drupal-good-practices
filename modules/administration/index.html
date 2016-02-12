@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <title>Administration - Drupal Good Practices</title>
+  
+
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/highlight.css">
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Administration";
+    var mkdocs_page_input_path = "modules/administration.md";
+    var mkdocs_page_url = "/modules/administration/";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  <script src="../../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script>
+  <script src="../../js/theme.js"></script> 
+
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> Drupal Good Practices</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../..">Home</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Articles</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../articles/install/">Install</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../articles/layout/">Layout building</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../articles/users/">Users</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../articles/content/">Content authoring</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../articles/multilanguage/">Multilanguage</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../articles/cache/">Cache system</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../articles/search/">Search</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../articles/security/">Security</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../articles/forms/">Forms</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../articles/theming/">Theming</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Advanced articles</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../advanced/testing/">Testing</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../advanced/deploy/">Deploy</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../advanced/drush/">Drush</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../advanced/git/">Git</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Modules</span></li>
+
+        
+            
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Administration</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#administration">Administration</a></li>
+                
+                    <li><a class="toctree-l4" href="#table-of-contents">Table of Contents</a></li>
+                
+            
+            </ul>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../content/">Content authoring</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../development/">Development</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../building/">Site building</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../utilites/">Utilites</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">Drupal Good Practices</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Modules &raquo;</li>
+        
+      
+    
+    <li>Administration</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="administration">Administration</h1>
+<h2 id="table-of-contents">Table of Contents</h2>
+<ul>
+<li><a href="#administration-menu">Administration menu</a></li>
+<li><a href="#module-filter">Module Filter</a></li>
+<li><a href="#fast-permissions-administration">Fast Permissions Administration</a></li>
+<li><a href="#features">Features</a></li>
+<li><a href="#administration-views">Administration Views</a></li>
+<li><a href="#views-bulk-operations-vbo">Views Bulk Operations (VBO)</a></li>
+<li><a href="#backup-and-migrate">Backup and Migrate</a></li>
+<li><a href="#themekey">ThemeKey</a></li>
+<li><a href="#workbench-moderation">Workbench Moderation</a></li>
+<li><a href="#schema">Schema</a></li>
+<li><a href="#flood-control">Flood control</a></li>
+<li><a href="#rabbit-hole">Rabbit Hole</a></li>
+<li><a href="#google-analytics">Google Analytics</a></li>
+<li><a href="#xml-sitemap">XML sitemap</a></li>
+<li><a href="#transliteration">Transliteration</a></li>
+<li><a href="#localization-update">Localization update</a></li>
+<li><a href="#global-redirect">Global Redirect</a></li>
+<li><a href="#redirect">Redirect</a></li>
+</ul>
+<h3 id="administration-menu"><a href="https://www.drupal.org/project/admin_menu">Administration menu</a></h3>
+<ul>
+<li>Fast navigation through administration pages, administration and development tools and more.</li>
+<li>Looks nice with Toolbar Style.</li>
+</ul>
+<h3 id="module-filter"><a href="https://www.drupal.org/project/module_filter">Module Filter</a></h3>
+<ul>
+<li>Greatly improves modules administration page.</li>
+</ul>
+<h3 id="fast-permissions-administration"><a href="https://www.drupal.org/project/fpa">Fast Permissions Administration</a></h3>
+<ul>
+<li>Greatly improves permissions administration page.</li>
+</ul>
+<h3 id="features"><a href="https://www.drupal.org/project/features">Features</a></h3>
+<ul>
+<li>Try to understand meaning of the "Feature" word.</li>
+<li>Start machine names of your features with <strong>feature_</strong> prefix.</li>
+<li>Place your features to <strong>sites/all/modules/features</strong> or <strong>sites/[site]/modules/features</strong> directory.</li>
+<li>Set another modules package for your features (ex "Custom Features")</li>
+<li>Remember: each feature is Drupal module so you can have some custom in it.</li>
+<li>For complex custom code it's preferred to place it to separate custom module and set dependency on feature instead of having a lot of custom code in the feature.</li>
+</ul>
+<h3 id="administration-views"><a href="https://www.drupal.org/project/admin_views">Administration Views</a></h3>
+<ul>
+<li>Replaces number of core's administrative overview/listing pages with views making it possible to customize, extend these pages and add more similar pages for different purposes.</li>
+</ul>
+<h3 id="views-bulk-operations-vbo"><a href="https://www.drupal.org/project/views_bulk_operations">Views Bulk Operations (VBO)</a></h3>
+<ul>
+<li>Augments <a href="#views">Views</a> by allowing bulk operations to be executed on the displayed rows.</li>
+<li>Extendable by code and <a href="#rules">Rules</a>.</li>
+<li>Requirement for the <a href="#administration-views">Administration Views</a>.</li>
+</ul>
+<h3 id="backup-and-migrate"><a href="https://www.drupal.org/project/backup_migrate">Backup and Migrate</a></h3>
+<ul>
+<li>Back up and restore your Drupal MySQL database, code, and files or migrate a site between environments.</li>
+<li>Supports gzip, bzip and zip compression.</li>
+<li>Supports automatic scheduled backups.</li>
+<li>Can save to a file on the server or offsite.</li>
+<li>Excellent and easy to use backup solution for small and middle projects.</li>
+<li>Do not use this module on big projects. CLI solutions (like Drush) or specific solutions are more preferred.</li>
+<li>Do not save backup to public access directories.</li>
+</ul>
+<h3 id="themekey"><a href="https://www.drupal.org/project/themekey">ThemeKey</a></h3>
+<ul>
+<li>Allows to define simple or sophisticated theme-switching rules which allow automatic selection of a theme depending on current path, taxonomy terms, language, node-type, and many, many other properties.</li>
+</ul>
+<h3 id="workbench-moderation"><a href="https://www.drupal.org/project/workbench_moderation">Workbench Moderation</a></h3>
+<ul>
+<li>Adds arbitrary moderation states to Drupal core's "unpublished" and "published" node states, and affects the behavior of node revisions when nodes are published.</li>
+</ul>
+<h3 id="schema"><a href="https://www.drupal.org/project/schema">Schema</a></h3>
+<ul>
+<li>Compares the live database structure with the schema structure declared by all enabled modules, reporting on any missing or incorrect tables.</li>
+<li>Provides hyperlinked display of the schema's embedded documentation explaining what each table and field is for.</li>
+<li>Examines the live database and creates Schema API data structures for all tables that match the live database.</li>
+</ul>
+<h3 id="flood-control"><a href="https://www.drupal.org/project/flood_control">Flood control</a></h3>
+<ul>
+<li>Adds an administration interface for hidden flood control variables in Drupal 7, like the login attempt limiters and any future hidden variables.</li>
+</ul>
+<h3 id="rabbit-hole"><a href="https://www.drupal.org/project/rabbit_hole">Rabbit Hole</a></h3>
+<ul>
+<li>Adds the ability to control what should happen when an entity is being viewed at its own page.</li>
+<li>Useful if you have a content type that never should be displayed on its own page, like an image content type that's displayed in a carousel.</li>
+<li>This is not an access control module!</li>
+<li>In most cases you will not need to override Rabbit Hole bundle settings on entity level.</li>
+<li>If you often need to override bundle settings on entity level, make sure this module fits your needs and you do not need true access control for example.</li>
+</ul>
+<h3 id="override-node-options"><a href="https://www.drupal.org/project/override_node_options">Override Node Options</a></h3>
+<p><strong>@todo Is it really helpful?</strong></p>
+<h3 id="views-data-export"><a href="https://www.drupal.org/project/views_data_export">Views data export</a></h3>
+<p><strong>@todo TBD</strong></p>
+<h3 id="diff"><a href="https://www.drupal.org/project/diff">Diff</a></h3>
+<p><strong>@todo TBD</strong></p>
+<h3 id="ultimate-cron"><a href="https://www.drupal.org/project/ultimate_cron">Ultimate Cron</a></h3>
+<p><strong>@todo TBD</strong></p>
+<h3 id="todo-weight-vs-nodequeue-vs-other">@todo Weight vs. Nodequeue (vs. other?)</h3>
+<h3 id="todo-httpswwwdrupalorgprojecttotal_control">@todo https://www.drupal.org/project/total_control ?</h3>
+<h3 id="google-analytics"><a href="https://www.drupal.org/project/google_analytics">Google Analytics</a></h3>
+<ul>
+<li>Adds the Google Analytics web statistics tracking system to your website.</li>
+<li>Better choice than hardcoded Google Analytics code (usually in templates) since it has a lot of configuration options and allows to track only needed roles.</li>
+</ul>
+<h3 id="xml-sitemap"><a href="https://www.drupal.org/project/xmlsitemap">XML sitemap</a></h3>
+<ul>
+<li>Creates a sitemap that conforms to the sitemaps.org specification.</li>
+</ul>
+<h3 id="transliteration"><a href="https://www.drupal.org/project/transliteration">Transliteration</a></h3>
+<ul>
+<li>Provides one-way string transliteration (romanization) and cleans file names during upload by replacing unwanted characters.</li>
+<li>May be used for transliteration for URLs (when using Pathauto 2.x).</li>
+<li>Must-have.</li>
+</ul>
+<h3 id="localization-update"><a href="https://www.drupal.org/project/l10n_update">Localization update</a></h3>
+<ul>
+<li>Automatically downloads and updates your translations by fetching them from <a href="https://localize.drupal.org/">localize.drupal.org</a> or any other <a href="https://www.drupal.org/project/l10n_server">Localization server</a>.</li>
+</ul>
+<h3 id="global-redirect"><a href="https://www.drupal.org/project/globalredirect">Global Redirect</a></h3>
+<ul>
+<li>Checks the current URL for an alias and does a 301 redirect to it if it is not being used.</li>
+<li>Checks the current URL for a trailing slash and removes it if present.</li>
+<li>Makes sure the case of the URL being accessed is the same as the one set by the author/administrator.</li>
+</ul>
+<h3 id="redirect"><a href="https://www.drupal.org/project/redirect">Redirect</a></h3>
+<ul>
+<li>@todo TBD. </li>
+</ul>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../content/" class="btn btn-neutral float-right" title="Content authoring">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../../advanced/git/" class="btn btn-neutral" title="Git"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../../advanced/git/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../content/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+
+</body>
+</html>

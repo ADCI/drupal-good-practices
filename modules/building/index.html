@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <title>Site building - Drupal Good Practices</title>
+  
+
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/highlight.css">
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Site building";
+    var mkdocs_page_input_path = "modules/building.md";
+    var mkdocs_page_url = "/modules/building/";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  <script src="../../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script>
+  <script src="../../js/theme.js"></script> 
+
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> Drupal Good Practices</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../..">Home</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Articles</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../articles/install/">Install</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../articles/layout/">Layout building</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../articles/users/">Users</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../articles/content/">Content authoring</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../articles/multilanguage/">Multilanguage</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../articles/cache/">Cache system</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../articles/search/">Search</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../articles/security/">Security</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../articles/forms/">Forms</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../articles/theming/">Theming</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Advanced articles</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../advanced/testing/">Testing</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../advanced/deploy/">Deploy</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../advanced/drush/">Drush</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../advanced/git/">Git</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Modules</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../administration/">Administration</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../content/">Content authoring</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../development/">Development</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Site building</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#site-building">Site building</a></li>
+                
+                    <li><a class="toctree-l4" href="#table-of-contents">Table of Contents</a></li>
+                
+            
+            </ul>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../utilites/">Utilites</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">Drupal Good Practices</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Modules &raquo;</li>
+        
+      
+    
+    <li>Site building</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="site-building">Site building</h1>
+<h2 id="table-of-contents">Table of Contents</h2>
+<ul>
+<li><a href="#views">Views</a></li>
+<li><a href="#date">Date</a></li>
+<li><a href="#webform">Webform</a></li>
+<li><a href="#link">link</a></li>
+<li><a href="#views-slideshow">Views Slideshow</a></li>
+<li><a href="#colorbox">Colorbox</a></li>
+<li><a href="#entity-reference">Entity reference</a></li>
+<li><a href="#field-group">Field Group</a></li>
+<li><a href="#menu-block">Menu block</a></li>
+<li><a href="#context">Context</a></li>
+<li><a href="#internationalization">Internationalization</a></li>
+<li><a href="#strongarm">Strongarm</a></li>
+<li><a href="#display-suite">Display Suite</a></li>
+<li><a href="#menu-attributes">Menu attributes</a></li>
+<li><a href="#superfish">Superfish</a></li>
+<li><a href="#metatag">Metatag</a></li>
+<li><a href="#field-collection">Field collection</a></li>
+<li><a href="#block-class">Block Class</a></li>
+</ul>
+<h3 id="views"><a href="https://www.drupal.org/project/views">Views</a></h3>
+<ul>
+<li>Adequate machine names for your views and displays.</li>
+<li>View and displays names should talk about where and how they will be used.</li>
+<li>Write a little descriptions for view and displays.</li>
+<li><a href="https://www.drupal.org/project/views_content_cache">Content cache</a> for Node, Time based cache for another entity types.</li>
+<li>Attach your views to features.</li>
+<li>Add CSS class to displays.</li>
+</ul>
+<h3 id="date"><a href="https://www.drupal.org/project/date">Date</a></h3>
+<ul>
+<li>Flexible date/time field type Date field.</li>
+<li>Date API that other modules can use.</li>
+</ul>
+<h3 id="webform"><a href="https://www.drupal.org/project/webform">Webform</a></h3>
+<ul>
+<li>The module for making forms and surveys. Often used for misc contact forms.</li>
+<li>After a submission, users may be sent an e-mail "receipt" as well as sending a notification to administrators.</li>
+<li>Results can be exported into Excel or other spreadsheet applications.</li>
+<li>Also provides some basic statistical review and has an extensive API for expanding its features.</li>
+<li>Does not use Drupal 7 Fields and Entities, has its own API, implementations and integrations - so it may be more lightweight solution, but sometimes it creates limitations on extendability.</li>
+</ul>
+<h3 id="link"><a href="https://www.drupal.org/project/link">Link</a></h3>
+<ul>
+<li>Field type for links.</li>
+</ul>
+<h3 id="views-slideshow"><a href="https://www.drupal.org/project/views_slideshow">Views Slideshow</a></h3>
+<ul>
+<li>Can be used to create a slideshow of any content (not just images) that can appear in a View.</li>
+<li>Heavily customizable.</li>
+<li>Many contributes modules extend its functionality and provide more kinds of slideshow.</li>
+</ul>
+<h3 id="colorbox"><a href="https://www.drupal.org/project/colorbox">Colorbox</a></h3>
+<ul>
+<li>Probides Colorbox - light-weight customizable lightbox plugin for jQuery - integration into Drupal.</li>
+<li>Images, iframed or inline content etc. can be displayed in a overlay above the current page.</li>
+<li>Most installed Drupal 7 lightbox module.</li>
+<li>There are many modules which support Colorbox or extend its functionality.<br />
+    ex. <a href="https://www.drupal.org/project/colorbox_node">Colorbox node</a> which provides an ability to display any page inside a colorbox modal without the header and footer.</li>
+</ul>
+<h3 id="entity-reference"><a href="https://www.drupal.org/project/entityreference">Entity reference</a></h3>
+<ul>
+<li>Provides a field type that can reference arbitrary entities.  </li>
+<li>Create relations between entities (nodes, users and other). Similar <a href="https://www.drupal.org/project/references">References</a> module is <strong>not recommended for use</strong>.</li>
+</ul>
+<h3 id="field-group"><a href="https://www.drupal.org/project/field_group">Field Group</a></h3>
+<ul>
+<li>All fieldable entities will have the possibility to add groups to wrap their fields together.</li>
+<li>Comes with default HTML wrappers like vertical tabs, horizontal tabs, accordions, fieldsets or div wrappers.</li>
+<li>May be used on both entity forms and displays.</li>
+<li>Helps noticeable improve administrion UI, especially for entities with many fields.</li>
+</ul>
+<h3 id="menu-block"><a href="https://www.drupal.org/project/menu_block">Menu block</a></h3>
+<ul>
+<li>Configurable blocks of menu trees starting with any level of any menu.</li>
+<li>And more!</li>
+</ul>
+<h3 id="context"><a href="https://www.drupal.org/project/context">Context</a></h3>
+<ul>
+<li>Allows you to manage contextual conditions and reactions for different portions of your site.</li>
+<li>Think of conditions as a set of rules that are checked during page load to see what context is active. Any reactions that are associated with active contexts are then fired.</li>
+<li>Often used to manage blocks visibility depending on complex conditions when it's not possible to use core's blocks visibility.</li>
+</ul>
+<h3 id="internationalization"><a href="https://www.drupal.org/project/i18n">Internationalization</a></h3>
+<ul>
+<li>aka i18n.</li>
+<li>Collection of modules to extend Drupal core multilingual capabilities.</li>
+<li>Taxonomy translation (both, per language terms and translatable terms).</li>
+<li>Multilingual variables.</li>
+<li>Multilingual blocks (control visibility per language and translate title and content).</li>
+<li>Language selection (when you switch the site language you'll see only the content for that language).</li>
+</ul>
+<h3 id="strongarm"><a href="https://www.drupal.org/project/strongarm">Strongarm</a></h3>
+<ul>
+<li>Gives site builders a way to override the default variable values that Drupal core and contributed modules ship with.</li>
+<li>Mostly used with the <a href="https://www.drupal.org/project/features">Features</a> module to export Drupal variable values.</li>
+</ul>
+<h3 id="display-suite"><a href="https://www.drupal.org/project/ds">Display Suite</a></h3>
+<ul>
+<li>Allows you to take full control over how your content is displayed using a drag and drop interface.</li>
+<li>Arrange your nodes, views, comments, user data etc.</li>
+<li>Dozens of template files.</li>
+<li>A predefined list of layouts.</li>
+<li>Possibility to add your own custom fields in the backend or in your code.</li>
+<li>Possibility to add custom layouts in your theme.</li>
+<li>Overrides layouts for rendered entities.</li>
+<li>Has own templates so theme's node.tpl.php and similar are not used when Display Suite layout is used.</li>
+</ul>
+<h3 id="menu-attributes"><a href="https://www.drupal.org/project/menu_attributes">Menu attributes</a></h3>
+<ul>
+<li>Allows you to specify some additional attributes for menu items such as id, name, class, style, and rel.</li>
+<li>Very useful when some of menu items need for individual styling (for example, links to social networks).</li>
+</ul>
+<h3 id="superfish"><a href="https://www.drupal.org/project/superfish">Superfish</a></h3>
+<ul>
+<li>Integrates jQuery Superfish plugin with your Drupal menus.</li>
+<li>Dropdown menus in blocks.</li>
+</ul>
+<h3 id="metatag"><a href="https://www.drupal.org/project/metatag">Metatag</a></h3>
+<ul>
+<li>Allows you to automatically provide structured metadata, aka "meta tags", about a website.</li>
+<li>Description and keywords metadata.</li>
+<li><a href="http://ogp.me/">Open Graph</a> support  allow control of how content appears when shared on social networks (for example Facebook).</li>
+<li>And more.</li>
+<li>Most installed Drupal 7 module for metatags.</li>
+</ul>
+<h3 id="field-collection"><a href="https://www.drupal.org/project/field_collection">Field collection</a></h3>
+<ul>
+<li>Provides a field-collection field, to which any number of fields can be attached.</li>
+<li>In other words it provides field type which is actually combination of several fields of any type.</li>
+<li>Internally represented as an entity, which is embedded in the host entity.</li>
+<li>Helpful in building complex fields, for example image with link.</li>
+</ul>
+<h3 id="block-class"><a href="https://www.drupal.org/project/block_class">Block Class</a></h3>
+<ul>
+<li>Allows users to add classes to any block through the block's configuration interface.</li>
+<li>Must-have. Blocks should not be styled using IDs in CSS selectors - classes much more preferred.</li>
+</ul>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../utilites/" class="btn btn-neutral float-right" title="Utilites">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../development/" class="btn btn-neutral" title="Development"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../development/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../utilites/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+
+</body>
+</html>
