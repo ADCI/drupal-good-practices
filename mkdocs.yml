@@ -1,4 +1,7 @@
 site_name: Drupal Good Practices
+
+repo_url: https://github.com/ADCI/drupal-good-practices.git
+
 pages:
   - Home: index.md
   - Articles:
