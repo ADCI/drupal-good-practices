@@ -382,7 +382,7 @@
         }, 
         {
             "location": "/advanced/git/", 
-            "text": "Git\n\n\nTable of Contents\n\n\n\n\nInstallation\n\n\nConfiguration\n\n\nDocumentation\n\n\nGit flows\n\n\nTools\n\n\n\n\nInstallation\n\n\n\n\nLinux\n\n\nWindows\n\n\n\n\nConfiguration\n\n\n\n\nReference\n\n\nBook\n\n\n\n\nDocumentation\n\n\nFor available git commands, options and examples see \nAPI Reference\n.\n\nFor more descriptive info on commands, usege and internals see \n\"Pro GIT\" book\n.\n\n\nGit flows.\n\n\n\n\nBranching workflow\n and \nMaintaining a Project\n available on \ngit-scm\n.\n\n\nGitHub Flow\n\n\nComparing Workflows\n on \nAtlassian\n.\n\n\n\"A successful Git branching model\"\n\n\n\"A (Simpler) Successful Git Branching Model\"\n\n\nA pragmatic guide to the Branch Per Feature git branching strategy\n\n\n\n\nTools\n\n\n@todo TBD", 
+            "text": "Git\n\n\nTable of Contents\n\n\n\n\nInstallation\n\n\nConfiguration\n\n\nDocumentation\n\n\nGit flows\n\n\nTools\n\n\nOther\n\n\n\n\nInstallation\n\n\n\n\nLinux\n\n\nWindows\n\n\n\n\nConfiguration\n\n\n\n\nReference\n\n\nBook\n\n\n\n\nDocumentation\n\n\nFor available git commands, options and examples see \nAPI Reference\n.\n\nFor more descriptive info on commands, usege and internals see \n\"Pro GIT\" book\n.\n\n\nGit flows\n\n\n\n\nBranching workflow\n and \nMaintaining a Project\n available on \ngit-scm\n.\n\n\nGitHub Flow\n\n\nComparing Workflows\n on \nAtlassian\n.\n\n\n\"A successful Git branching model\"\n\n\n\"A (Simpler) Successful Git Branching Model\"\n\n\nA pragmatic guide to the Branch Per Feature git branching strategy\n\n\n\n\nTools\n\n\n@todo TBD\n\n\nOther\n\n\n.gitignore\n\n\nSometimes you'll want to customize \n.gitignore\n file \nshipped\n with Drupal 7\n- check \nthis collection\n of .gitignore files for some ideas what can be added to your .gitignore.", 
             "title": "Git"
         }, 
         {
@@ -392,7 +392,7 @@
         }, 
         {
             "location": "/advanced/git/#table-of-contents", 
-            "text": "Installation  Configuration  Documentation  Git flows  Tools", 
+            "text": "Installation  Configuration  Documentation  Git flows  Tools  Other", 
             "title": "Table of Contents"
         }, 
         {
@@ -413,12 +413,22 @@
         {
             "location": "/advanced/git/#git-flows", 
             "text": "Branching workflow  and  Maintaining a Project  available on  git-scm .  GitHub Flow  Comparing Workflows  on  Atlassian .  \"A successful Git branching model\"  \"A (Simpler) Successful Git Branching Model\"  A pragmatic guide to the Branch Per Feature git branching strategy", 
-            "title": "Git flows."
+            "title": "Git flows"
         }, 
         {
             "location": "/advanced/git/#tools", 
             "text": "@todo TBD", 
             "title": "Tools"
+        }, 
+        {
+            "location": "/advanced/git/#other", 
+            "text": "", 
+            "title": "Other"
+        }, 
+        {
+            "location": "/advanced/git/#gitignore", 
+            "text": "Sometimes you'll want to customize  .gitignore  file  shipped  with Drupal 7\n- check  this collection  of .gitignore files for some ideas what can be added to your .gitignore.", 
+            "title": ".gitignore"
         }, 
         {
             "location": "/modules/administration/", 
