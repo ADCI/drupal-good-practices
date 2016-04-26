@@ -15,6 +15,7 @@ pages:
     - 'Security': 'articles/security.md'
     - 'Forms': 'articles/forms.md'
     - 'Theming': 'articles/theming.md'
+    - 'Contributing to Drupal': 'articles/contributing.md'
   - Advanced articles:
     - 'Testing': 'advanced/testing.md'
     - 'Deploy': 'advanced/deploy.md'
