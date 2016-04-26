@@ -351,6 +351,31 @@
             "title": "Theming"
         }, 
         {
+            "location": "/articles/contributing/", 
+            "text": "Contributing to Drupal.\n\n\nPatches, modules, themes, distributions, etc.\n\n\nCreating and maintaining projects.\n\n\nDocs:\n\n\n\n\nBest practices for creating and maintaining projects\n\n\nTips for a great project page\n\n\nREADME Template\n\n\nModule documentation guidelines\n\n\nBest practices for co-maintaining projects\n\n\nGranting Issue Credit as a Maintainer\n\n\nCommit messages - providing history and credit\n\n\nStatus settings of issues\n\n\nRelease naming conventions\n\n\nWhat are alpha, beta releases and release candidates?\n\n\nCreating a project release\n\n\n\n\nNotes:\n\n\n\n\nMake sure you've adhered to the \nDrupal coding standards\n.\n    Use \nCoder\n project and it's online version \nhttp://pareview.sh/\n to check your Drupal code against coding standards and other best practices.\n\n\nAlways add \nREADME.txt\n file to your project. Use \nREADME Template\n.\n\n\nIf your module creates any hooks or has an associated API, add examples of these hooks in a file named \nmodulename.api.php\n.\n\n\nGrant issue credits appropriately when maintaining a project.\n\n\nAttribute authorship of provided by community patch by \nadding a commit author\n if applied with no or minimal changes.\n\n\nYou should not need to set \nClosed (fixed)\n issue status yourself.\n\n\nOnce you've created an official or development release (node) on a branch, you cannot alter git history on this branch anymore.\n\n\n\n\nPatches.\n\n\nDocs:\n\n\n\n\nMaking a Drupal patch with Git\n\n\nAdvanced patch contributor guide\n\n\nApplying patches with Git\n\n\n\n\nGit.\n\n\nTBD.", 
+            "title": "Contributing to Drupal"
+        }, 
+        {
+            "location": "/articles/contributing/#contributing-to-drupal", 
+            "text": "Patches, modules, themes, distributions, etc.", 
+            "title": "Contributing to Drupal."
+        }, 
+        {
+            "location": "/articles/contributing/#creating-and-maintaining-projects", 
+            "text": "Docs:   Best practices for creating and maintaining projects  Tips for a great project page  README Template  Module documentation guidelines  Best practices for co-maintaining projects  Granting Issue Credit as a Maintainer  Commit messages - providing history and credit  Status settings of issues  Release naming conventions  What are alpha, beta releases and release candidates?  Creating a project release   Notes:   Make sure you've adhered to the  Drupal coding standards .\n    Use  Coder  project and it's online version  http://pareview.sh/  to check your Drupal code against coding standards and other best practices.  Always add  README.txt  file to your project. Use  README Template .  If your module creates any hooks or has an associated API, add examples of these hooks in a file named  modulename.api.php .  Grant issue credits appropriately when maintaining a project.  Attribute authorship of provided by community patch by  adding a commit author  if applied with no or minimal changes.  You should not need to set  Closed (fixed)  issue status yourself.  Once you've created an official or development release (node) on a branch, you cannot alter git history on this branch anymore.", 
+            "title": "Creating and maintaining projects."
+        }, 
+        {
+            "location": "/articles/contributing/#patches", 
+            "text": "Docs:   Making a Drupal patch with Git  Advanced patch contributor guide  Applying patches with Git", 
+            "title": "Patches."
+        }, 
+        {
+            "location": "/articles/contributing/#git", 
+            "text": "TBD.", 
+            "title": "Git."
+        }, 
+        {
             "location": "/advanced/testing/", 
             "text": "Testing", 
             "title": "Testing"

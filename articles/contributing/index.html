@@ -8,7 +8,7 @@
   
   
   
-  <title>Multilanguage - Drupal Good Practices</title>
+  <title>Contributing to Drupal - Drupal Good Practices</title>
   
 
   <link rel="shortcut icon" href="../../img/favicon.ico">
@@ -23,9 +23,9 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "Multilanguage";
-    var mkdocs_page_input_path = "articles/multilanguage.md";
-    var mkdocs_page_url = "/articles/multilanguage/";
+    var mkdocs_page_name = "Contributing to Drupal";
+    var mkdocs_page_input_path = "articles/contributing.md";
+    var mkdocs_page_url = "/articles/contributing/";
   </script>
   
   <script src="../../js/jquery-2.1.1.min.js"></script>
@@ -95,15 +95,8 @@
 
         
             
-    <li class="toctree-l1 current">
-        <a class="current" href="./">Multilanguage</a>
-        
-            <ul>
-            
-                <li class="toctree-l3"><a href="#multilanguage">Multilanguage</a></li>
-                
-            
-            </ul>
+    <li class="toctree-l1 ">
+        <a class="" href="../multilanguage/">Multilanguage</a>
         
     </li>
 
@@ -144,8 +137,21 @@
 
         
             
-    <li class="toctree-l1 ">
-        <a class="" href="../contributing/">Contributing to Drupal</a>
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Contributing to Drupal</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#contributing-to-drupal">Contributing to Drupal.</a></li>
+                
+                    <li><a class="toctree-l4" href="#creating-and-maintaining-projects">Creating and maintaining projects.</a></li>
+                
+                    <li><a class="toctree-l4" href="#patches">Patches.</a></li>
+                
+                    <li><a class="toctree-l4" href="#git">Git.</a></li>
+                
+            
+            </ul>
         
     </li>
 
@@ -258,7 +264,7 @@
         
       
     
-    <li>Multilanguage</li>
+    <li>Contributing to Drupal</li>
     <li class="wy-breadcrumbs-aside">
       
         
@@ -272,7 +278,43 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="multilanguage">Multilanguage</h1>
+                <h1 id="contributing-to-drupal">Contributing to Drupal.</h1>
+<p><em>Patches, modules, themes, distributions, etc.</em></p>
+<h2 id="creating-and-maintaining-projects">Creating and maintaining projects.</h2>
+<p><strong>Docs:</strong></p>
+<ul>
+<li><a href="https://www.drupal.org/node/7765">Best practices for creating and maintaining projects</a></li>
+<li><a href="https://www.drupal.org/node/997024">Tips for a great project page</a></li>
+<li><a href="https://www.drupal.org/node/2181737">README Template</a></li>
+<li><a href="https://www.drupal.org/node/161085">Module documentation guidelines</a></li>
+<li><a href="https://www.drupal.org/node/363367">Best practices for co-maintaining projects</a></li>
+<li><a href="https://www.drupal.org/getting-involved/maintainer/grant-issue-credits">Granting Issue Credit as a Maintainer</a></li>
+<li><a href="https://www.drupal.org/node/52287">Commit messages - providing history and credit</a></li>
+<li><a href="https://www.drupal.org/issue-queue/status">Status settings of issues</a></li>
+<li><a href="https://www.drupal.org/node/1015226">Release naming conventions</a></li>
+<li><a href="https://www.drupal.org/documentation/version-info/alpha-beta-rc">What are alpha, beta releases and release candidates?</a></li>
+<li><a href="https://www.drupal.org/node/1068944">Creating a project release</a></li>
+</ul>
+<p><strong>Notes:</strong></p>
+<ul>
+<li>Make sure you've adhered to the <a href="https://www.drupal.org/coding-standards">Drupal coding standards</a>.
+    Use <a href="https://www.drupal.org/project/coder">Coder</a> project and it's online version <a href="http://pareview.sh/">http://pareview.sh/</a> to check your Drupal code against coding standards and other best practices.</li>
+<li>Always add <strong>README.txt</strong> file to your project. Use <a href="https://www.drupal.org/node/2181737">README Template</a>.</li>
+<li>If your module creates any hooks or has an associated API, add examples of these hooks in a file named <strong>modulename.api.php</strong>.</li>
+<li>Grant issue credits appropriately when maintaining a project.</li>
+<li>Attribute authorship of provided by community patch by <a href="https://www.drupal.org/node/1146430">adding a commit author</a> if applied with no or minimal changes.</li>
+<li>You should not need to set <a href="https://www.drupal.org/issue-queue/status#closed">Closed (fixed)</a> issue status yourself.</li>
+<li>Once you've created an official or development release (node) on a branch, you cannot alter git history on this branch anymore.</li>
+</ul>
+<h2 id="patches">Patches.</h2>
+<p><strong>Docs:</strong></p>
+<ul>
+<li><a href="https://www.drupal.org/node/707484">Making a Drupal patch with Git</a></li>
+<li><a href="https://www.drupal.org/node/1054616">Advanced patch contributor guide</a></li>
+<li><a href="https://www.drupal.org/node/1399218">Applying patches with Git</a></li>
+</ul>
+<h2 id="git">Git.</h2>
+<p>TBD.</p>
               
             </div>
           </div>
@@ -280,10 +322,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../cache/" class="btn btn-neutral float-right" title="Cache system">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../../advanced/testing/" class="btn btn-neutral float-right" title="Testing">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../content/" class="btn btn-neutral" title="Content authoring"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../theming/" class="btn btn-neutral" title="Theming"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -311,10 +353,10 @@
           <a href="https://github.com/ADCI/drupal-good-practices.git" class="icon icon-github" style="float: left; color: #fcfcfc"> GitHub</a>
       
       
-        <span><a href="../content/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../theming/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../cache/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../../advanced/testing/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>
