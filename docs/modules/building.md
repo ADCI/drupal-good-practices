@@ -3,6 +3,7 @@
 ## Table of Contents
 
   - [Views](#views)
+  - [Features](#features)
   - [Date](#date)
   - [Webform](#webform)
   - [link](#link)
@@ -29,6 +30,11 @@
   - [Content cache](https://www.drupal.org/project/views_content_cache) for Node, Time based cache for another entity types.
   - Attach your views to features.
   - Add CSS class to displays.
+
+### [Features](https://www.drupal.org/project/features)
+
+  - Export your configurations to code as much as possible.
+  - See the [How to Organize Drupal Features, Reduce Merge Conflicts, and Stay Sane](https://chromatichq.com/blog/how-organize-drupal-features-reduce-merge-conflicts-and-stay-sane) article for features organization guidelines.
 
 ### [Date](https://www.drupal.org/project/date)
 
